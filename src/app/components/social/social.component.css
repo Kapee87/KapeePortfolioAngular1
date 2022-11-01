@@ -1,0 +1,14 @@
+a img{
+    width: 50px;
+    transition: 1s;
+}
+#foti{
+    width: 60px;
+    border-radius: 40%;
+    border: solid #222;
+}
+div{
+    display: flex;
+    gap: .7rem;
+    align-items: center;
+}

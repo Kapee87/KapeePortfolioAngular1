@@ -1,0 +1,28 @@
+.header{
+    position: fixed;
+    width: 99vw;
+    z-index: 100;
+}
+div{
+    background-color: #a1b5cb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+a{
+    text-decoration: none;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+    text-align: center;
+    word-wrap: break-word;
+    color: aliceblue;
+    font-weight: bolder;
+    text-shadow: black 1px 1px 1px;
+}
+a:hover{
+    color:rgb(208, 214, 219);
+    text-shadow: black 3px 3px 5px;
+}
+
+
