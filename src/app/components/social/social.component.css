@@ -12,3 +12,10 @@ div{
     gap: .7rem;
     align-items: center;
 }
+
+@media screen and (max-width:740px) {
+    a{
+        display: none;
+    }
+    
+}

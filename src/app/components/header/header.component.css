@@ -1,28 +1,40 @@
-.header{
+.header {
     position: fixed;
-    width: 99vw;
+    width: 100vw;
     z-index: 100;
+    padding: 0 1rem;
 }
-div{
-    background-color: #a1b5cb;
+
+div {
+    background-color: #35393C;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
 }
-a{
+/* font-family: 'Akronim', cursive;
+font-family: 'Allison', cursive;
+font-family: 'Averia Sans Libre', cursive;
+font-family: 'Bad Script', cursive; */
+
+a {
     text-decoration: none;
-    font-family:'Courier New', Courier, monospace;
-    font-size: 1.3rem;
+    font-family: 'Akronim', cursive;
+    font-size: 2rem;
     text-align: center;
     word-wrap: break-word;
     color: aliceblue;
     font-weight: bolder;
-    text-shadow: black 1px 1px 1px;
+    
 }
-a:hover{
-    color:rgb(208, 214, 219);
+
+a:hover {
+    color: rgb(208, 214, 219);
     text-shadow: black 3px 3px 5px;
 }
 
-
+@media screen and (max-width: 740px) {
+    div, .header, a{
+        font-size: .7rem;
+    }
+}
