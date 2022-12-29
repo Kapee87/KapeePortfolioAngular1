@@ -1,21 +1,108 @@
-a img{
-    width: 50px;
+.navLinkCollapse img {
+    width: 40px;
     transition: 1s;
 }
-#foti{
-    width: 60px;
-    border-radius: 40%;
+
+.offcanvas-body #foti {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     border: solid #222;
 }
-div{
+
+.offcanvas-body div {
+    margin-top: .5rem;
     display: flex;
     gap: .7rem;
     align-items: center;
 }
 
-@media screen and (max-width:740px) {
-    a{
-        display: none;
+
+.offcanvas-body {
+    padding-left: 2rem;
+}
+
+a {
+    transition: all .3s;
+    display: block;
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Akronim', cursive;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.roundContainer {
+    border-top: solid 1px aliceblue;
+    padding-top: 2rem;
+    display: flex;
+    width: 15rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li a:hover {
+    border-bottom: groove 1px rgb(222, 225, 228);
+    /* box-shadow: aliceblue 5px 5px 3px; */
+}
+
+a:hover {
+    transform: scale(1.1);
+    transition: all .3s;
+}
+
+#burger {
+    position: absolute;
+    right: 1rem;
+    top: 2vh;
+    color: aliceblue;
+    border-color: aliceblue;
+}
+
+@media screen and (max-width: 740px) {
+    .offcanvas-body div {
+        flex-direction: row;
     }
-    
+
+    #offcanvasNavbar {
+        width: 50vw !important;
+    }
+
+    .roundContainer {
+        width: 4rem;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .roundContainer a {
+        text-align: center;
+    }
+
+    #loginLink {
+        border-top: groove 2px #397367;
+        background-color: #333;
+        border-bottom-right-radius: 20%;
+        border-bottom-left-radius: 20%;
+    }
+    button{
+        transition: all ease-in-out 1s;
+        transform: scale(.8);
+    }
+}
+
+@media screen and (max-width: 450px) {
+#burger{
+    transform: scale(.7);
+}
+a{
+    transition: all .5s;
+    transform: scale(.8);
+    margin: 0;
+}
+.offcanvas-body div{
+    gap: 0;
+}
+.offcanvas-body{
+    padding: 0;
+}
 }

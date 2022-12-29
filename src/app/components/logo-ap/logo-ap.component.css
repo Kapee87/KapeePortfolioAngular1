@@ -1,9 +1,14 @@
 #logoAP{
-    width: 150px;
+    width: 350px;
 }
 
 @media screen and (max-width:740px) {
     #logoAP{
-        width: 120px;
+        width: 200px;
     }
+}
+@media screen and (max-width: 450px) {
+ #logoAP{
+    width: 100px;
+ }   
 }

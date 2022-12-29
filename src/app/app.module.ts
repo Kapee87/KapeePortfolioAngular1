@@ -10,6 +10,10 @@ import { NotFound404Component } from './components/not-found404/not-found404.com
 import { SobreMiComponent } from './components/sobre-mi/sobre-mi.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import { ExperienciaLaboralComponent } from './components/experiencia-laboral/experiencia-laboral.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
+import { HttpClientModule} from '@angular/common/http';
+import { EditIconComponent } from './edit-icon/edit-icon.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +23,17 @@ import { LoginComponent } from './components/login/login.component';
     SocialComponent,
     NotFound404Component,
     SobreMiComponent,
-    LoginComponent
+    LoginComponent,
+    ExperienciaLaboralComponent,
+    EducacionComponent,
+    EditIconComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

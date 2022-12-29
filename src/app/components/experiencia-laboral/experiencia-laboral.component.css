@@ -1,0 +1,146 @@
+
+/* font-family: 'Akronim', cursive;
+font-family: 'Allison', cursive;
+font-family: 'Averia Sans Libre', cursive;
+font-family: 'Bad Script', cursive; */
+
+.experiencia {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 10rem 10rem;
+    padding-top: 10rem;
+    font-size: 1.5rem;
+    gap: 2rem;
+}
+
+
+.experiencia .cardexp{
+    color: #282b2d;
+    width: max-content;
+    height: max-content;
+    border-radius: 30px;
+    background: #383c3e;
+    box-shadow: 15px 15px 30px #333739,
+               -15px -15px 30px #363a3c;
+                padding: 3rem;
+                display: flex;
+                justify-content: space-between;
+                gap: 2rem;
+}
+
+.experiencia .cardexp .text-container{
+    width: 30vw;
+}
+
+.experiencia, .experiencia h1, .experiencia h2, .experiencia span, .experiencia h6{
+    color: aliceblue;
+    text-shadow: rgba(0, 0, 0, 0.358) 3px 3px 5px;
+    font-weight: bolder;
+}
+.cardexp .img-container-exp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+.cardexp .img-container-exp,.cardexp .img-container-exp img{
+    width: 29vw;
+    height: 15vh;
+}
+
+.experiencia h1{
+    font-style: oblique;
+    margin-bottom: 1rem;
+    font-size: 6rem;
+    font-family: 'Allison', cursive;
+}
+.experiencia div h2 {
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-family: 'Allison', cursive;
+}
+.experiencia h6{
+    font-size: 2rem;
+    text-align: start;
+}
+.experiencia .cardexp .text-container {
+    text-align: left;
+}
+.experiencia h2, .experiencia h6, .experiencia span{
+    border-bottom: #7a8288 solid 1px;
+}
+.experiencia .text-container span p{
+    font-size: 1.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.experiencia a{
+    text-decoration: none;
+    color: #7a8288;
+    text-shadow: none;
+}
+.fondo{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #282b2d;
+}
+
+
+
+@media screen and (max-width:798px) {
+ 
+    .experiencia{
+        text-align: center;
+        padding: 0 5rem;
+        padding-top: 7rem;
+        justify-content: center;
+    }
+    .experiencia, .experiencia .cardexp, .experiencia span, .experiencia h6, .experiencia .cardexp span p{
+        font-size: 92%;
+    }
+    .experiencia .cardexp h2{
+        font-size: xx-large;
+    }
+    .experiencia h1{
+        transform: scale(.8);
+    }
+    #editExp{
+        transform: scale(.9);
+    }
+    .experiencia .cardexp{
+        flex-direction: column;
+        width: 70vw;
+        height: max-content;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .experiencia .cardexp .img-container-exp{
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .experiencia{
+        padding: 1rem 1rem;
+    }
+    .experiencia h1{
+        transform: scale(.5);
+    }
+    .experiencia .cardexp{
+        margin: 0;
+        padding: 1rem 0;
+        width: auto;
+        height: fit-content;
+    }
+    .experiencia .cardexp span p {
+        width: 12rem;
+        margin-left: -2rem;
+    }
+
+}

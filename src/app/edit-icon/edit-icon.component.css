@@ -1,0 +1,17 @@
+.editIcon svg:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    color:rgb(239, 255, 222);
+    transition: all ease-in-out .5s;
+}
+.editIcon svg{    
+    color:rgb(147, 156, 139);
+    width: 1.5rem;
+    transition: all ease-in-out .5s;    
+}
+
+@media screen and (max-width:450px) {
+    .editIcon{
+        order: 2;
+    }
+}

@@ -1,0 +1,38 @@
+.notFoundSection {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 0 4rem;
+    background-color: #F6F6F6;
+}
+
+a {
+    color: #262626;
+    text-decoration: none;
+    list-style-type: none;
+    transition: all 1s;
+    background-color: #afafaf;
+    padding: .5rem;
+    border-radius: 20px;
+}
+
+a:hover {
+    transition: all 1s ease-in-out;
+    background-color: #161616;
+    color: #F6F6F6;
+    padding: 1rem;
+}
+
+@media screen and (max-width:720px) {
+    .notFoundSection img {
+        width: 100%;
+    }
+    a{
+        transform: scale(.7);
+    }
+}
