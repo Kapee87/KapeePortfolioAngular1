@@ -133,7 +133,7 @@ font-family: 'Bad Script', cursive; */
   .experiencia h1 {
     transform: scale(0.8);
   }
-  #editExp {
+  .editExp {
     transform: scale(0.9);
   }
   .experiencia .cardexp {

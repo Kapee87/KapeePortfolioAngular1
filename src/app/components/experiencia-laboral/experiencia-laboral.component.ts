@@ -23,4 +23,8 @@ export class ExperienciaLaboralComponent implements OnInit {
     })
     ;
   }
+
+  handleClick(Exp: any){
+    console.log(Exp.idExp);
+  }
 }

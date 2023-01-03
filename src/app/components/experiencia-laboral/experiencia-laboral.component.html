@@ -3,7 +3,8 @@
   <h1>Experiencia Laboral</h1>
   
   <div class="cardexp" *ngFor="let exp of experiencia">
-   <app-edit-icon id="editExp"></app-edit-icon>
+
+   <app-edit-icon class="editExp" (click)="handleClick(exp)" ></app-edit-icon>
     <div class="img-container-exp">
       <img src="../../../assets/imt.png" alt="Logo de Empresa">
       <h2 id="nombre">{{exp.empresaExp}} </h2>

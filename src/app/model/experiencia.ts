@@ -7,7 +7,8 @@ export class Experiencia {
     descripcionExp:String;
     imgExp:String;
 
-    constructor(tituloExp:String, empresaExp:String, fechaIniExp:String,fechaFinExp:String,descripcionExp:String,imgExp:String){
+    constructor(idExp:number, tituloExp:String, empresaExp:String, fechaIniExp:String,fechaFinExp:String,descripcionExp:String,imgExp:String){
+        this.id=idExp;
         this.tituloExp=tituloExp;
         this.empresaExp=empresaExp;
         this.fechaIniExp=fechaIniExp;

@@ -1,7 +1,173 @@
-.educa {
+/* font-family: 'Akronim', cursive;
+font-family: 'Allison', cursive;
+font-family: 'Averia Sans Libre', cursive;
+font-family: 'Bad Script', cursive; */
+
+.educacion {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 10rem 10rem;
+    padding-top: 10rem;
+    font-size: 1.5rem;
+    gap: 2rem;
+  }
+  
+  .educacion .cardedu {
+    color: #282b2d;
+    width: max-content;
+    height: max-content;
+    border-radius: 30px;
+    background: #383c3e;
+    box-shadow: 15px 15px 30px #333739, -15px -15px 30px #363a3c;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .educacion .cardedu .text-container {
+    width: 30vw;
+  }
+  
+  .educacion,
+  .educacion h1,
+  .educacion h2,
+  .educacion span,
+  .educacion h6 {
+    color: aliceblue;
+    text-shadow: rgba(0, 0, 0, 0.358) 3px 3px 5px;
+    font-weight: bolder;
+  }
+  .cardedu .img-container-edu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0;
+  }
+  
+  .cardedu .img-container-edu,
+  .cardedu .img-container-edu img {
+    width: 29vw;
+    height: 15vh;
+  }
+  
+  .educacion h1 {
+    font-style: oblique;
+    margin-bottom: 1rem;
+    font-size: 6rem;
+    font-family: "Allison", cursive;
+    padding-right: 15rem;
+  }
+  .educacion div h2 {
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-family: "Averia Sans Libre", cursive;
+  }
+  .educacion h6 {
+    font-size: 2rem;
+    text-align: start;
+  }
+  .educacion .cardedu .text-container {
+    text-align: left;
+  }
+  .educacion h2,
+  .educacion h6,
+  .educacion span {
+    border-bottom: #7a8288 solid 1px;
+  }
+  .educacion .text-container span p {
+    font-size: 1.1rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .educacion a {
+    text-decoration: none;
+    color: #7a8288;
+    text-shadow: none;
+  }
+  
+  .fondieu {
+    background: #20152c;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(
+      to right,
+      rgb(19, 15, 23),
+      rgb(66, 66, 67)
+    );
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(94, 91, 99), rgb(0, 0, 0));
     width: 100vw;
     height: 100vh;
+    position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
+    align-items:center;
+  }
+  .hidden{
+      display: none;
+  }
+  
+  .visible{
+      display: grid;
+  }
+  
+  @media screen and (max-width: 798px) {
+    .educacion {
+      text-align: center;
+      padding: 0 5rem;
+      padding-top: 7rem;
+      justify-content: center;
+    }
+    .educacion,
+    .educacion .cardedu,
+    .educacion span,
+    .educacion h6,
+    .educacion .cardedu span p {
+      font-size: 92%;
+    }
+    .educacion .cardedu h2 {
+      font-size: xx-large;
+    }
+    .educacion h1 {
+      transform: scale(0.8);
+      text-align: center;
+      padding: 0;
+    }
+    .editExp {
+      transform: scale(0.9);
+    }
+    .educacion .cardedu {
+      flex-direction: column;
+      width: 70vw;
+      height: max-content;
+      gap: 0;
+      justify-content: center;
+      align-items: center;
+    }
+    .educacion .cardedu .img-container-edu {
+      gap: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    .educacion {
+      padding: 1rem 1rem;
+    }
+    .educacion h1 {
+      transform: scale(0.5);
+    }
+    .educacion .cardedu {
+      margin: 0;
+      padding: 1rem 0;
+      width: auto;
+      height: fit-content;
+    }
+    .educacion .cardedu span p {
+      width: 12rem;
+      margin-left: -2rem;
+    }
+  }
+  
