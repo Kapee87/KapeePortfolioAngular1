@@ -13,7 +13,11 @@ import { LoginComponent } from './components/login/login.component';
 import { ExperienciaLaboralComponent } from './components/experiencia-laboral/experiencia-laboral.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { HttpClientModule} from '@angular/common/http';
-import { EditIconComponent } from './edit-icon/edit-icon.component';
+import { EditIconComponent } from './components/minicomponents/edit-icon/edit-icon.component';
+import { SkillsComponent } from './components/minicomponents/skills/skills.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { SpinnerComponent } from './components/minicomponents/spinner/spinner.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +30,10 @@ import { EditIconComponent } from './edit-icon/edit-icon.component';
     LoginComponent,
     ExperienciaLaboralComponent,
     EducacionComponent,
-    EditIconComponent
+    EditIconComponent,
+    SkillsComponent,
+    BannerComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,3 +4,27 @@
 font-family: 'Allison', cursive;
 font-family: 'Averia Sans Libre', cursive;
 font-family: 'Bad Script', cursive; */
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #20152c;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(19, 15, 23), rgb(66, 66, 67));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(94, 91, 99), rgb(0, 0, 0))
+    }
+
+.gradient-noResponse{
+    background: #20152c;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(19, 15, 23), rgb(66, 66, 67));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(94, 91, 99), rgb(0, 0, 0));
+
+    position: fixed;
+    width: 100w;
+    height: 100vh;
+}

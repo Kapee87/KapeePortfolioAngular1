@@ -58,6 +58,31 @@ font-family: 'Bad Script', cursive; */
     z-index: -1;
     background-color: #282b2d;
 }
+.fondieu {
+    background: #20152c;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(
+      to right,
+      rgb(19, 15, 23),
+      rgb(66, 66, 67)
+    );
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(94, 91, 99), rgb(0, 0, 0));
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+  .hidden{
+      display: none;
+  }
+  
+  .visible{
+      display:flex;
+  }
 
 @media screen and (max-width:798px) {
     .sobre-mi {
@@ -76,11 +101,15 @@ font-family: 'Bad Script', cursive; */
     .sobre-mi div h2 {
         margin-bottom: .3rem;
     }
-
-    .sobre-mi img {
+    .sobre-mi .img-container{
+        display: flex;
+        align-self: start;
+    }
+    .sobre-mi .img-container img {
         width: 20w;
         height: 10vh;
         min-width: 300px;
         min-height: 220px;
+        justify-self: start;
     }
 }

@@ -1,6 +1,9 @@
-<div class="fondo"></div>
-<div class="sobre-mi">
-  <img src="../../../assets/IMG_20220713_143637563.jpg" alt="" />
+<!-- checkar porque se rompe el estilo agregando el spinner como está -->
+<app-spinner [ngClass]="{'hidden':!varclass, 'visible':varclass}" class="fondieu"></app-spinner>
+<div class="sobre-mi" [ngClass]="{'hidden':varclass, 'visible':!varclass }">
+<div class="img-container">
+  <img src="../../../assets/IMG_20220713_143637563.jpg" alt="foto" />
+</div>
   <div>
     <h1>Sobre mí</h1>
     <app-edit-icon></app-edit-icon>

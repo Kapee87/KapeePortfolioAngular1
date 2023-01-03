@@ -1,21 +1,22 @@
-<div class="fondo"></div>
-<div class="experiencia">
+<app-spinner [ngClass]="{'hidden':!varclass, 'visible':varclass}" class="fondieu"></app-spinner>
+<div class="experiencia varclass" [ngClass]="{'hidden':varclass, 'visible':!varclass }">
   <h1>Experiencia Laboral</h1>
   
-  <div class="cardexp">
+  <div class="cardexp" *ngFor="let exp of experiencia">
    <app-edit-icon id="editExp"></app-edit-icon>
     <div class="img-container-exp">
       <img src="../../../assets/imt.png" alt="Logo de Empresa">
-      <h2 id="nombre">Nombre institucion/empresa</h2>
+      <h2 id="nombre">{{exp.empresaExp}} </h2>
     </div>
     <div class="text-container">
-        <h6>Puesto: Lalalala</h6>  
-        <span>fecha de inicio: la/la/dede </span>
+        <h6>Puesto: {{exp.tituloExp}} </h6>  
+        <span>fecha de inicio: {{exp.fechaIniExp}} - {{exp.fechaFinExp}} </span>
         <span> 
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo at molestiae animi quas, officia nihil blanditiis dolore placeat quis sequi quod sed beatae provident deleniti numquam explicabo perspiciatis vitae laborum repellendus incidunt laboriosam harum distinctio? Temporibus soluta iusto quod sapiente inventore id commodi tempore accusantium?
+            {{exp.descripcionExp}}
           </p>
         </span>  
     </div>
   </div>
+
 </div>

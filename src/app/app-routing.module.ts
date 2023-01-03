@@ -8,6 +8,7 @@ import { IntroComponent } from './components/intro/intro.component';
 import { LoginComponent } from './components/login/login.component';
 import { NotFound404Component } from './components/not-found404/not-found404.component';
 import { SobreMiComponent } from './components/sobre-mi/sobre-mi.component';
+import { SkillsComponent } from './components/minicomponents/skills/skills.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
