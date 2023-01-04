@@ -1,0 +1,24 @@
+<app-spinner [ngClass]="{'hidden':!varclass, 'visible':varclass}" class="fondieu"></app-spinner>
+<div class="proyectos varclass" [ngClass]="{'hidden':varclass, 'visible':!varclass }">
+  <h1>Proyectos</h1>
+  
+  <div class="cardproy" *ngFor="let proyecto of Proyectos">
+
+   <app-edit-icon class="editProyecto" (click)="handleClick()" ></app-edit-icon>
+    <div class="img-container-proy">
+      <img src="../../../assets/imt.png" alt="Logo de Empresa">
+      <h2 id="nombre">{{proyecto.nombreProyecto}} </h2>
+    </div>
+    <div class="text-container">
+        <h6>Url: {{proyecto.urlProyecto}} </h6>  
+        <span>fecha de inicio: {{'algo'}}</span>
+        <span> 
+          <p>
+            {{proyecto.descripcionProyecto}}
+          </p>
+        </span>  
+        <img src={{proyecto.imgProyecto}} alt={{proyecto.imgProyecto}>
+    </div>
+  </div>
+
+</div>

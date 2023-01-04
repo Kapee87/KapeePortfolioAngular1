@@ -1,16 +1,16 @@
 export class Skills {
-  id?: number;
+  idSkill?: number;
   nombreSkill: String;
   fotoSkill: String;
   porcentaje: number;
 
   constructor(
-    id: number,
+    idSkill: number,
     nombreSkill: String,
     fotoSkill: String,
     porcentaje: number
   ) {
-    this.id = id;
+    this.idSkill = idSkill;
     this.nombreSkill = nombreSkill;
     this.fotoSkill = fotoSkill;
     this.porcentaje = porcentaje;

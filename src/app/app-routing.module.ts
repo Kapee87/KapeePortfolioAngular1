@@ -1,14 +1,16 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { BannerComponent } from './components/banner/banner.component';
-import { EducacionComponent } from './components/educacion/educacion.component';
-import { ExperienciaLaboralComponent } from './components/experiencia-laboral/experiencia-laboral.component';
 import { IntroComponent } from './components/intro/intro.component';
-import { LoginComponent } from './components/login/login.component';
-import { NotFound404Component } from './components/not-found404/not-found404.component';
-import { SobreMiComponent } from './components/sobre-mi/sobre-mi.component';
+
 import { SkillsComponent } from './components/minicomponents/skills/skills.component';
+import { NotFound404Component } from './components/not-found404/not-found404.component';
+import { BannerComponent } from './pages/banner/banner.component';
+import { EducacionComponent } from './pages/educacion/educacion.component';
+import { ExperienciaLaboralComponent } from './pages/experiencia-laboral/experiencia-laboral.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ProyectosComponent } from './pages/proyectos/proyectos.component';
+import { SobreMiComponent } from './pages/sobre-mi/sobre-mi.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'educacion', component: EducacionComponent },
   { path: 'sobre-mi', component: SobreMiComponent },
   { path: 'login', component: LoginComponent },
+  {path: 'skills', component:SkillsComponent},
+  {path: 'proyectos', component:ProyectosComponent},
   { path: '**', component: NotFound404Component },
 ];
 

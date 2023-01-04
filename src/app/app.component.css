@@ -1,30 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Allison&family=Averia+Sans+Libre&family=Bad+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Akronim&family=Allison&family=Averia+Sans+Libre&family=Bad+Script&display=swap");
 
 /* font-family: 'Akronim', cursive;
 font-family: 'Allison', cursive;
 font-family: 'Averia Sans Libre', cursive;
 font-family: 'Bad Script', cursive; */
 .gradient-custom {
-    /* fallback for old browsers */
-    background: #20152c;
-    
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgb(19, 15, 23), rgb(66, 66, 67));
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgb(94, 91, 99), rgb(0, 0, 0))
-    }
+  /* fallback for old browsers */
+  background: #20152c;
 
-.gradient-noResponse{
-    background: #20152c;
-    
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgb(19, 15, 23), rgb(66, 66, 67));
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgb(94, 91, 99), rgb(0, 0, 0));
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgb(19, 15, 23),
+    rgb(66, 66, 67)
+  );
 
-    position: fixed;
-    width: 100w;
-    height: 100vh;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgb(94, 91, 99), rgb(0, 0, 0));
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
+.gradient-noResponse {
+  background: #20152c;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgb(19, 15, 23),
+    rgb(66, 66, 67)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgb(94, 91, 99), rgb(0, 0, 0));
+
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }

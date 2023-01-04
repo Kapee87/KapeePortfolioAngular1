@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {
     this.form= this.formBuilder.group({
       password: ['', [Validators.required, Validators.minLength(8)]],
-      mail: ['', [Validators.required, Validators.minLength(5), Validators.email]]
+      email: ['', [Validators.required, Validators.minLength(5), Validators.email]]
     })
    }
 
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   get Mail(){
-    return this.form.get('mail');
+    return this.form.get('email');
   }
 
   get PasswordValid(){

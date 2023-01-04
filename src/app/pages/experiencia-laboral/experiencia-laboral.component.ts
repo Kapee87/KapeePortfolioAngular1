@@ -15,7 +15,7 @@ export class ExperienciaLaboralComponent implements OnInit {
   ngOnInit(): void {
     this.service.lista().subscribe((data) => {
       this.experiencia = data;
-      if (data.length !== 0){
+      if (data !== null || data !== undefined ){
         setTimeout(() => {
           this.varclass = !this.varclass;
         }, 500);
