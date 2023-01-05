@@ -1,0 +1,16 @@
+.row{
+    background: #35393C;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+footer{
+    color:aliceblue;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 1px -1px 5px rgba(240, 248, 255, 0.358);
+
+}

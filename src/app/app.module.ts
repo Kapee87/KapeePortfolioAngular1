@@ -20,6 +20,7 @@ import { ExperienciaLaboralComponent } from './pages/experiencia-laboral/experie
 import { EducacionComponent } from './pages/educacion/educacion.component';
 import { BannerComponent } from './pages/banner/banner.component';
 import { ProyectosComponent } from './pages/proyectos/proyectos.component';
+import { FooterComponent } from './components/footer/footer/footer.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { ProyectosComponent } from './pages/proyectos/proyectos.component';
     BannerComponent,
     SpinnerComponent,
     ProyectosComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

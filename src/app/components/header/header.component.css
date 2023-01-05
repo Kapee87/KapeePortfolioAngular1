@@ -3,6 +3,7 @@
     width: 100vw;
     z-index: 100;
     padding: 0 1rem;
+    box-shadow: 1px 1px 5px rgba(240, 248, 255, 0.358);
 }
 
 div, .header div {
