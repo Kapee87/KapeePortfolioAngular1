@@ -1,0 +1,26 @@
+[debug] [2023-01-06T18:17:38.655Z] ----------------------------------------------------------------------
+[debug] [2023-01-06T18:17:38.658Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Kapee\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init --token 1//0hR3KJKaHH5DcCgYIARAAGBESNwF-L9Irl2syAucHyxlZnC1wStgwqcIDwTmTixVOl4uFUwDjYt6CQAnQzeJHPb6sRVsS6CYQSCs
+[debug] [2023-01-06T18:17:38.659Z] CLI Version:   11.20.0
+[debug] [2023-01-06T18:17:38.659Z] Platform:      win32
+[debug] [2023-01-06T18:17:38.659Z] Node Version:  v16.14.0
+[debug] [2023-01-06T18:17:38.660Z] Time:          Fri Jan 06 2023 15:17:38 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-01-06T18:17:38.660Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-06T18:17:38.756Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-06T18:17:38.756Z] > authorizing via --token option
+[warn] !  Authenticating with `--token` is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Bibliotecas\Coding\ArgentinaPrograma\Proyecto\KapeePortfolio
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
