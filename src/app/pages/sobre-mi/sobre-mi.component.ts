@@ -28,18 +28,5 @@ export class SobreMiComponent implements OnInit {
         }, 500);
       }
     });
-
-    // this.personaService.getPersona().subscribe(data=> {
-    //   this.persona = data;
-
-    //   console.log(data)
-
-    //   });
-
-    //para request que devuelven listas.
-    // this.personaService.getPersonas().subscribe(personas=>{
-    //   this.personasList = personas
-    //   console.log(this.personasList[0]);
-    // })
   }
 }

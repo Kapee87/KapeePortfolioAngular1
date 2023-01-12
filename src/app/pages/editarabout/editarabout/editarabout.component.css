@@ -1,0 +1,17 @@
+
+.row div .card{
+    box-shadow: 0px 0px 50px rgba(125, 120, 120, 0.674);
+}
+.error{
+    color: red;
+}
+.border-danger{
+    border-color: red;
+}
+.hidden {
+    display: none;
+  }
+  
+  .visible {
+    display: flex;
+  }

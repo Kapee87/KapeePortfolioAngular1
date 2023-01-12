@@ -3,10 +3,11 @@
 <div class="sobre-mi" [ngClass]="{'hidden':varclass, 'visible':!varclass }">
 <div class="img-container">
   <img src="../../../assets/IMG_20220713_143637563.jpg" alt="foto" />
+  <!-- <img src={{persona.urlFoto}} alt="foto" /> -->
 </div>
   <div>
     <h1>Sobre mí</h1>
-    <app-edit-icon></app-edit-icon>
+    <app-edit-icon routerLink="/editarSobreMi"></app-edit-icon>
     <h2 id="nombre">{{persona.nombre}} {{persona.apellido}}</h2>
     <h6>fullstack web developer</h6>
     <span>

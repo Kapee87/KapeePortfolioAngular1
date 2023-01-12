@@ -7,7 +7,7 @@ import { Educacion } from '../model/educacion.model';
   providedIn: 'root',
 })
 export class EducacionService {
-  expUrl = 'http://localhost:8080/educacion/';
+  expUrl = 'https://springbootbackendap-production.up.railway.app/educacion/';
 
   constructor(private httpClient: HttpClient) {}
 

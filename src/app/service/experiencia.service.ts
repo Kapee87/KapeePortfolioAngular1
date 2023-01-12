@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root',
 })
 export class ExperienciaService {
-  expUrl = 'http://localhost:8080/laboral/';
+  expUrl = 'https://springbootbackendap-production.up.railway.app/laboral/';
 
   constructor(private httpClient: HttpClient) {}
 

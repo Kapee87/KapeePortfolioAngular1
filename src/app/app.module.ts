@@ -21,6 +21,8 @@ import { EducacionComponent } from './pages/educacion/educacion.component';
 import { BannerComponent } from './pages/banner/banner.component';
 import { ProyectosComponent } from './pages/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer/footer.component';
+import { EditaraboutComponent } from './pages/editarabout/editarabout/editarabout.component';
+
 
 
 @NgModule({
@@ -40,6 +42,7 @@ import { FooterComponent } from './components/footer/footer/footer.component';
     SpinnerComponent,
     ProyectosComponent,
     FooterComponent,
+    EditaraboutComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@ import { Proyectos } from '../model/proyectos.model';
   providedIn: 'root',
 })
 export class ProyectosService {
-  URL = 'http://localhost:8080/proyectos/';
+  URL = 'https://springbootbackendap-production.up.railway.app/proyectos/';
 
   constructor(private httpClient: HttpClient) {}
 
