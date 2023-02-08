@@ -3,7 +3,7 @@ font-family: 'Allison', cursive;
 font-family: 'Averia Sans Libre', cursive;
 font-family: 'Bad Script', cursive; */
 
-.proyectos {
+.educacion {
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -13,7 +13,7 @@ font-family: 'Bad Script', cursive; */
     gap: 2rem;
   }
   
-  .proyectos .cardproy {
+  .educacion .cardedu {
     color: #282b2d;
     width: max-content;
     height: max-content;
@@ -26,20 +26,20 @@ font-family: 'Bad Script', cursive; */
     gap: 2rem;
   }
   
-  .proyectos .cardproy .text-container {
+  .educacion .cardedu .text-container {
     width: 30vw;
   }
   
-  .proyectos,
-  .proyectos h1,
-  .proyectos h2,
-  .proyectos span,
-  .proyectos h6 {
+  .educacion,
+  .educacion h1,
+  .educacion h2,
+  .educacion span,
+  .educacion h6 {
     color: aliceblue;
     text-shadow: rgba(0, 0, 0, 0.358) 3px 3px 5px;
     font-weight: bolder;
   }
-  .cardproy .img-container-proy {
+  .cardedu .img-container-edu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,41 +47,42 @@ font-family: 'Bad Script', cursive; */
     margin: 5rem 0;
   }
   
-  .cardproy .img-container-proy,
-  .cardproy .img-container-proy img {
+  .cardedu .img-container-edu,
+  .cardedu .img-container-edu img {
     width: 29vw;
     height: 15vh;
   }
   
-  .proyectos h1 {
+  .educacion h1 {
     font-style: oblique;
     margin-bottom: 1rem;
     font-size: 6rem;
     font-family: "Allison", cursive;
+    padding-right: 15rem;
   }
-  .proyectos div h2 {
+  .educacion div h2 {
     margin-bottom: 1rem;
     font-size: 3.5rem;
     font-style: normal;
     font-family: "Averia Sans Libre", cursive;
   }
-  .proyectos h6 {
+  .educacion h6 {
     font-size: 2rem;
     text-align: start;
   }
-  .proyectos .cardproy .text-container {
+  .educacion .cardedu .text-container {
     text-align: left;
   }
-  .proyectos h2,
-  .proyectos h6,
-  .proyectos span {
+  .educacion h2,
+  .educacion h6,
+  .educacion span {
     border-bottom: #7a8288 solid 1px;
   }
-  .proyectos .text-container span p {
+  .educacion .text-container span p {
     font-size: 1.1rem;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
-  .proyectos a {
+  .educacion a {
     text-decoration: none;
     color: #7a8288;
     text-shadow: none;
@@ -105,6 +106,12 @@ font-family: 'Bad Script', cursive; */
     justify-content: center;
     align-items:center;
   }
+
+  .nuevaEdu{
+    display: flex;
+    justify-content: flex-end;
+  }
+
   .hidden{
       display: none;
   }
@@ -114,29 +121,31 @@ font-family: 'Bad Script', cursive; */
   }
   
   @media screen and (max-width: 798px) {
-    .proyectos {
+    .educacion {
       text-align: center;
       padding: 0 5rem;
       padding-top: 7rem;
       justify-content: center;
     }
-    .proyectos,
-    .proyectos .cardproy,
-    .proyectos span,
-    .proyectos h6,
-    .proyectos .cardproy span p {
+    .educacion,
+    .educacion .cardedu,
+    .educacion span,
+    .educacion h6,
+    .educacion .cardedu span p {
       font-size: 92%;
     }
-    .proyectos .cardproy h2 {
+    .educacion .cardedu h2 {
       font-size: xx-large;
     }
-    .proyectos h1 {
+    .educacion h1 {
       transform: scale(0.8);
+      text-align: center;
+      padding: 0;
     }
     .editExp {
       transform: scale(0.9);
     }
-    .proyectos .cardproy {
+    .educacion .cardedu {
       flex-direction: column;
       width: 70vw;
       height: max-content;
@@ -144,25 +153,25 @@ font-family: 'Bad Script', cursive; */
       justify-content: center;
       align-items: center;
     }
-    .proyectos .cardproy .img-container-proy {
+    .educacion .cardedu .img-container-edu {
       gap: 2rem;
     }
   }
   
   @media screen and (max-width: 450px) {
-    .proyectos {
+    .educacion {
       padding: 1rem 1rem;
     }
-    .proyectos h1 {
+    .educacion h1 {
       transform: scale(0.5);
     }
-    .proyectos .cardproy {
+    .educacion .cardedu {
       margin: 0;
       padding: 1rem 0;
       width: auto;
       height: fit-content;
     }
-    .proyectos .cardproy span p {
+    .educacion .cardedu span p {
       width: 12rem;
       margin-left: -2rem;
     }

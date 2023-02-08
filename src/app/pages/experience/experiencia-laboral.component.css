@@ -103,14 +103,18 @@ font-family: 'Bad Script', cursive; */
   position: fixed;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
-.hidden{
-    display: none;
+.nuevaExp {
+  display: flex;
+  justify-content: flex-end;
+}
+.hidden {
+  display: none;
 }
 
-.visible{
-    display: grid;
+.visible {
+  display: grid;
 }
 
 @media screen and (max-width: 798px) {

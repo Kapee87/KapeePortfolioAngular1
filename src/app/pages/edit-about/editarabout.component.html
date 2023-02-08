@@ -1,0 +1,98 @@
+<app-spinner [ngClass]="{ hidden: !varclass, visible: varclass }"></app-spinner>
+<section
+  class="vh-100 pt-5"
+  [ngClass]="{ hidden: varclass, visible: !varclass }"
+>
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem">
+          <div class="card-body p-5 text-center">
+            <div class="mb-md-5 mt-md-4 pb-5">
+              <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                <h2 class="fw-bold mb-2 text-uppercase">Editar Sobre mí</h2>
+                <div class="form-outline form-white mb-4">
+                  <input
+                    type="text"
+                    formControlName="nombre"
+                    name="nombre"
+                    placeholder="{{ persona.nombre }}"
+                    class="form-control form-control-lg"
+                    (click)="onSelect($event)"
+                    (change)="onChange($event)"
+                  />
+                  <label class="form-label" for="nombre">Nombre</label>
+                  <input
+                    type="text"
+                    formControlName="apellido"
+                    name="apellido"
+                    placeholder="{{ persona.apellido }}"
+                    class="form-control form-control-lg"
+                    (click)="onSelect($event)"
+                    (change)="onChange($event)"
+                  />
+                  <label class="form-label" for="apellido">Apellido</label>
+                  <input
+                    type="date"
+                    name="fechaNac"
+                    formControlName="fechaNac"
+                    class="form-control form-control-lg"
+                    (click)="onSelect($event)"
+                    (change)="onChange($event)"
+                  />
+                  <label class="form-label" for="fechaNac"
+                    >Fecha de nacimiento</label
+                  >
+                  <input
+                    type="tel"
+                    placeholder="{{ persona.telefono }}"
+                    name="telefono"
+                    formControlName="telefono"
+                    class="form-control form-control-lg"
+                    (click)="onSelect($event)"
+                    (change)="onChange($event)"
+                  />
+                  <label class="form-label" for="telefono">Telefono</label>
+                  <input
+                    type="text"
+                    formControlName="correo"
+                    name="correo"
+                    placeholder="{{ persona.correo }}"
+                    class="form-control form-control-lg"
+                    (click)="onSelect($event)"
+                    (change)="onChange($event)"
+                  />
+                  <label class="form-label" for="correo"
+                    >Correo electrónico</label
+                  >
+                  <textarea
+                    type="text"
+                    formControlName="descripcion"
+                    name="descripcion"
+                    placeholder="{{ persona.descripcion }}"
+                    class="form-control form-control-xs descripcion"
+                    (click)="onSelect($event)"
+                    (change)="onChange($event)"
+                  ></textarea>
+                  <label class="form-label" for="descripcion"
+                    >Descripcion</label
+                  >
+                  <hr />
+                  <app-delete-icon
+                    (click)="onCleanUp($event)"
+                  ></app-delete-icon>
+                  <span>Vaciar datos</span>
+                </div>
+                <hr />
+
+                <button class="btn btn-outline-light btn-lg px-5" type="submit">
+                  Actualizar los datos
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

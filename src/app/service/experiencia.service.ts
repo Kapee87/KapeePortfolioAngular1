@@ -16,20 +16,20 @@ export class ExperienciaService {
   }
 
   public details(id: number): Observable<Experiencia> {
-    return this.httpClient.get<Experiencia>(`${this.expUrl}/experiencia/${id}`);
+    return this.httpClient.get<Experiencia>(`${this.expUrl}experiencia/${id}`);
   }
 
-  public save(experiencia: Experiencia): Observable<any> {
-    return this.httpClient.post<any>(`${this.expUrl}/crear`, experiencia);
+  public save(experiencia: Experiencia) {
+    return this.httpClient.post(`${this.expUrl}crear`, experiencia);
   }
 
   public update(id: number, experiencia: Experiencia): Observable<any> {
-    return this.httpClient.put<any>(`${this.expUrl}/editar/${id}`, experiencia);
+    return this.httpClient.put<any>(`${this.expUrl}editar/${id}`, experiencia);
   }
   public delete(id: number): Observable<any> {
-    return this.httpClient.delete<any>(`${this.expUrl}/borrar/${id}`);
+    return this.httpClient.delete<any>(`${this.expUrl}borrar/${id}`);
   }
   public deleteAll(id: number): Observable<any> {
-    return this.httpClient.delete<any>(`${this.expUrl}/vaciar`);
+    return this.httpClient.delete<any>(`${this.expUrl}vaciar`);
   }
 }

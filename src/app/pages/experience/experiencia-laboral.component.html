@@ -1,0 +1,43 @@
+<app-spinner
+  [ngClass]="{ hidden: !varclass, visible: varclass }"
+  class="fondieu"
+></app-spinner>
+<div
+  class="experiencia varclass"
+  [ngClass]="{ hidden: varclass, visible: !varclass }"
+>
+  <h1>Experiencia Laboral</h1>
+  <div [ngClass]="{ hidden: !userLogged, visible: userLogged }">
+    <div class="nuevaExp">
+      <p>Cargar nueva</p>
+      <app-new-icon routerLink="/nuevaExperiencia"></app-new-icon>
+    </div>
+  </div>
+
+  <div class="cardexp" *ngFor="let exp of experiencia">
+    <app-edit-icon
+      class="editExp"
+      (click)="handleClick(exp)"
+      [ngClass]="{ hidden: !userLogged, visible: userLogged }"
+    ></app-edit-icon>
+    <app-delete-icon
+      (click)="handleDelete(exp)"
+      [ngClass]="{ hidden: !userLogged, visible: userLogged }"
+    ></app-delete-icon>
+    <div class="img-container-exp">
+      <img src="../../../assets/imt.png" alt="Logo de Empresa" />
+      <h2 id="nombre">{{ exp.empresaExp }}</h2>
+    </div>
+    <div class="text-container">
+      <h6>Puesto: {{ exp.tituloExp }}</h6>
+      <span
+        >fecha de inicio: {{ exp.fechaIniExp }} - {{ exp.fechaFinExp }}
+      </span>
+      <span>
+        <p>
+          {{ exp.descripcionExp }}
+        </p>
+      </span>
+    </div>
+  </div>
+</div>

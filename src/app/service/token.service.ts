@@ -15,4 +15,12 @@ export class TokenServiceService {
   public Login(user: User) {
     return this.httpClient.post(this.Url, user);
   }
+  public isLogged(): boolean{
+    if (sessionStorage.getItem('token')) {
+      console.log('sale tru')
+      return true;
+    }
+    console.log('sale fols')
+    return false;
+  }
 }

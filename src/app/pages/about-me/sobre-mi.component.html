@@ -7,7 +7,7 @@
 </div>
   <div>
     <h1>Sobre mí</h1>
-    <app-edit-icon routerLink="/editarSobreMi"></app-edit-icon>
+    <app-edit-icon routerLink="/editarSobreMi" [ngClass]="{'hidden':!userLogged, 'visible':userLogged }"></app-edit-icon>
     <h2 id="nombre">{{persona.nombre}} {{persona.apellido}}</h2>
     <h6>fullstack web developer</h6>
     <span>

@@ -40,6 +40,18 @@ div img {
 
 }
 
+.editBox{
+    opacity: 0.2;
+    color: aliceblue;
+}
+.hidden {
+    display: none;
+  }
+  
+  .visible {
+    display: grid;
+  }
+
 
 @keyframes entrance {
     0% {

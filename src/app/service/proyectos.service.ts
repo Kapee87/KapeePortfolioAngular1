@@ -14,4 +14,16 @@ export class ProyectosService {
   public getProyectos(): Observable<Proyectos[]> {
     return this.httpClient.get<Proyectos[]>(this.URL + 'traerLista');
   }
+  public save(proyectos: Proyectos) {
+    return this.httpClient.post(`${this.URL}crear`, proyectos);
+  }
+  public update(id: number, proyectos: Proyectos): Observable<any> {
+    return this.httpClient.put<any>(`${this.URL}editar/${id}`, proyectos);
+  }
+  public delete(id: number): Observable<any> {
+    return this.httpClient.delete<any>(`${this.URL}borrar/${id}`);
+  }
+  public deleteAll(id: number): Observable<any> {
+    return this.httpClient.delete<any>(`${this.URL}vaciar`);
+  }
 }

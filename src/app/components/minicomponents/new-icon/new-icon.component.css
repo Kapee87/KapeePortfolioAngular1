@@ -1,0 +1,12 @@
+.newIcon svg:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  color: rgb(255, 255, 255);
+  transition: all ease-in-out 0.5s;
+}
+.newIcon svg {
+  color: rgb(195, 206, 187);
+  width: 1.5rem;
+  transition: all ease-in-out 0.5s;
+  margin: .5rem;
+}

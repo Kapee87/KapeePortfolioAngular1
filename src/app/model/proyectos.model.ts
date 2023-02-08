@@ -1,5 +1,5 @@
 export class Proyectos {
-  id?: number;
+  idProyecto?: number;
   nombreProyecto: String;
   descripcionProyecto: String;
   fechaProyecto: String;
@@ -7,14 +7,14 @@ export class Proyectos {
   urlProyecto: String;
 
   constructor(
-    id: number,
+    idProyecto: number,
     nombreProyecto: String,
     descripcionProyecto: String,
     fechaProyecto: String,
     imgProyecto: String,
     urlProyecto: String
   ) {
-    this.id = id;
+    this.idProyecto = idProyecto;
     this.nombreProyecto = nombreProyecto;
     this.descripcionProyecto = descripcionProyecto;
     this.fechaProyecto = fechaProyecto;

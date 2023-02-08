@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { User } from 'src/app/model/User.model';
+import { SessionTimingService } from 'src/app/service/session-timing.service';
 import { TokenServiceService } from 'src/app/service/token.service';
 
 @Component({
@@ -14,10 +16,16 @@ export class LoginComponent implements OnInit {
     email: '',
     password: '',
   };
+  token: any = {
+    token: '',
+  };
+  varclass = true;
 
   constructor(
     private formBuilder: FormBuilder,
-    private service: TokenServiceService
+    private tokenService: TokenServiceService,
+    private sessionService: SessionTimingService,
+    private router: Router
   ) {
     this.form = this.formBuilder.group({
       password: ['', [Validators.required, Validators.minLength(6)]],
@@ -28,7 +36,9 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isVisible();
+  }
 
   get Password() {
     return this.form.get('password');
@@ -44,18 +54,37 @@ export class LoginComponent implements OnInit {
   get MailValid() {
     return this.Mail?.touched && !this.Mail?.valid;
   }
+  isVisible() {
+    if (this.tokenService.isLogged()) {
+      this.varclass = true;
+    } else {
+      this.varclass = false;
+    }
+  }
+
   onEnviar(event: Event) {
     event.preventDefault;
 
     if (this.form.valid) {
       this.user.email = this.Mail?.value;
       this.user.password = this.Password?.value;
-      console.log(this.user)
-      this.service.Login(this.user).subscribe((data) => {
-        console.log(data);
-       });
+      this.tokenService.Login(this.user).subscribe((data) => {
+        this.token = data;
+        sessionStorage.setItem('token', this.token.accessToken);
+        this.isVisible();
+        this.sessionService.SessionTimeOut();
+        this.router.navigateByUrl('/');
+      });
     } else {
       this.form.markAllAsTouched();
     }
+  }
+
+  onCloseSession() {
+    sessionStorage.clear();
+    this.isVisible();
+  }
+  extendSession() {
+    this.sessionService.extendSession();
   }
 }

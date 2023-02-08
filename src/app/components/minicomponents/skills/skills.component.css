@@ -14,14 +14,17 @@
   initial-value: 0;
 }
 h1 {
-  order: 0;
+  font-style: oblique;
+  margin-bottom: 1rem;
+  font-size: 6rem;
+  font-family: "Allison", cursive;
 }
 .skills {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   gap: 2rem;
   color: aliceblue;
   padding-top: 5rem;
@@ -45,7 +48,6 @@ h1 {
   gap: 2rem;
   flex-wrap: wrap;
   width: 70vw;
-  
 }
 .fondieu {
   width: 100vw;
@@ -91,6 +93,14 @@ div[role="progressbar"]::before {
   content: counter(percentage) "%";
 }
 
+.nuevaSkill {
+  display: flex;
+  justify-content: flex-end;
+}
+.nuevaSkill, .skills h1{
+  margin-right: 3rem;
+}
+
 .hidden {
   display: none;
 }
@@ -99,22 +109,22 @@ div[role="progressbar"]::before {
   display: flex;
 }
 
-@media screen and (max-width:768px) {
-  .skillsCard{
-    transform:scale(.9);
+@media screen and (max-width: 768px) {
+  .skillsCard {
+    transform: scale(0.9);
     transition: all ease-in-out 1s;
   }
 }
 
-@media screen and (max-width:540px){
- .skillsCard{
-  transform: scale(.7);
-  transition: all ease-in-out 1s;
- }   
- .cardContainer{
-  flex-direction: row;
-  width: 100vw;
-  gap: 0;
-  padding: 0;
- }
+@media screen and (max-width: 540px) {
+  .skillsCard {
+    transform: scale(0.7);
+    transition: all ease-in-out 1s;
+  }
+  .cardContainer {
+    flex-direction: row;
+    width: 100vw;
+    gap: 0;
+    padding: 0;
+  }
 }

@@ -1,0 +1,174 @@
+/* font-family: 'Akronim', cursive;
+font-family: 'Allison', cursive;
+font-family: 'Averia Sans Libre', cursive;
+font-family: 'Bad Script', cursive; */
+
+.proyectos {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding: 10rem 10rem;
+  padding-top: 10rem;
+  font-size: 1.5rem;
+  gap: 2rem;
+  word-wrap: break-word;
+}
+
+.proyectos .cardproy {
+  color: #282b2d;
+  width: max-content;
+  height: max-content;
+  border-radius: 30px;
+  background: #383c3e;
+  box-shadow: 15px 15px 30px #333739, -15px -15px 30px #363a3c;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.proyectos .cardproy .text-container {
+  width: 30vw;
+}
+
+.proyectos,
+.proyectos h1,
+.proyectos h2,
+.proyectos span,
+.proyectos h6 {
+  color: aliceblue;
+  text-shadow: rgba(0, 0, 0, 0.358) 3px 3px 5px;
+  font-weight: bolder;
+}
+.cardproy .img-container-proy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0;
+}
+
+.cardproy .img-container-proy,
+.cardproy .img-container-proy img {
+  width: 29vw;
+  height: 15vh;
+}
+
+.proyectos h1 {
+  font-style: oblique;
+  margin-bottom: 1rem;
+  font-size: 6rem;
+  font-family: "Allison", cursive;
+}
+.proyectos div h2 {
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-family: "Averia Sans Libre", cursive;
+}
+.proyectos h6 {
+  font-size: 2rem;
+  text-align: start;
+}
+.proyectos .cardproy .text-container {
+  text-align: left;
+}
+.proyectos h2,
+.proyectos h6,
+.proyectos span {
+  border-bottom: #7a8288 solid 1px;
+}
+.proyectos .text-container span p {
+  font-size: 1.1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.proyectos a {
+  text-decoration: none;
+  color: #7a8288;
+  text-shadow: none;
+}
+
+.fondieu {
+  background: #20152c;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgb(19, 15, 23),
+    rgb(66, 66, 67)
+  );
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgb(94, 91, 99), rgb(0, 0, 0));
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nuevoProyecto {
+  display: flex;
+  justify-content: flex-end;
+}
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: grid;
+}
+
+@media screen and (max-width: 798px) {
+  .proyectos {
+    text-align: center;
+    padding: 0 5rem;
+    padding-top: 7rem;
+    justify-content: center;
+  }
+  .proyectos,
+  .proyectos .cardproy,
+  .proyectos span,
+  .proyectos h6,
+  .proyectos .cardproy span p {
+    font-size: 92%;
+  }
+  .proyectos .cardproy h2 {
+    font-size: xx-large;
+  }
+  .proyectos h1 {
+    transform: scale(0.8);
+  }
+  .editExp {
+    transform: scale(0.9);
+  }
+  .proyectos .cardproy {
+    flex-direction: column;
+    width: 70vw;
+    height: max-content;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .proyectos .cardproy .img-container-proy {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .proyectos {
+    padding: 1rem 1rem;
+  }
+  .proyectos h1 {
+    transform: scale(0.5);
+  }
+  .proyectos .cardproy {
+    margin: 0;
+    padding: 1rem 0;
+    width: auto;
+    height: fit-content;
+  }
+  .proyectos .cardproy span p {
+    width: 12rem;
+    margin-left: -2rem;
+  }
+}
