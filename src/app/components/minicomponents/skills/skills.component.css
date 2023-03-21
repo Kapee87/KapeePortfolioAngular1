@@ -95,13 +95,9 @@ div[role="progressbar"]::before {
 
 .nuevaSkill {
   display: flex;
+  justify-content: flex-end;
 }
-.nuevaSkill p {
-  display: inline-block;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.nuevaSkill,
-.skills h1 {
+.nuevaSkill, .skills h1{
   margin-right: 3rem;
 }
 
