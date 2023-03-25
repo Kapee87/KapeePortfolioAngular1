@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ConexionService {
-baseUrl = 'http://localhost:8080'
+baseUrl = 'https://backend-namontaner.onrender.com'
   constructor() { }
 
   public getAuthUrl(){
