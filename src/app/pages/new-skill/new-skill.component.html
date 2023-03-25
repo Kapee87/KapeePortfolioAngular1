@@ -6,65 +6,46 @@
           <div class="card-body p-5 text-center">
             <div class="mb-md-5 mt-md-4 pb-5">
               <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
-                <h2 class="fw-bold mb-2 text-uppercase">Nuevo Proyecto</h2>
+                <h2 class="fw-bold mb-2 text-uppercase">
+                  {{
+                  editId === null
+                  ? "Nueva habilidad"
+                  : "Editar habilidad"
+                  }}
+                </h2>
                 <div class="form-outline form-white mb-4">
-                  <input
-                    type="text"
-                    formControlName="nombreSkill"
-                    name="nombreSkill"
-                    placeholder="{{ skills.nombreSkill }}"
-                    class="form-control form-control-lg"
-                    (click)="onSelect($event)"
-                    (change)="onChange($event)"
-                  />
+                  <input type="text" formControlName="nombreSkill" name="nombreSkill"
+                    placeholder="{{ skills.nombreSkill }}" class="form-control form-control-lg"
+                    (click)="onSelect($event)" (change)="onChange($event)" />
                   <label class="form-label" for="nombreSkill">Habilidad*</label>
 
-                  <input
-                    type="text"
-                    formControlName="fotoSkill"
-                    name="fotoSkill"
-                    placeholder="{{ skills.fotoSkill }}"
-                    class="form-control form-control-lg"
-                    (click)="onSelect($event)"
-                    (change)="onChange($event)"
-                  />
-                  <label class="form-label" for="fotoSkill"
-                    >Url foto Skill</label
-                  >
-
-                  <input
-                    type="number"
-                    formControlName="porcentaje"
-                    name="porcentaje"
-                    placeholder="{{ skills.porcentaje }}"
-                    class="form-control form-control-lg"
-                    minlength="0"
-                    maxlength="100"
-                    (click)="onSelect($event)"
-                    (change)="onChange($event)"
-                  />
-                  <label class="form-label" for="porcentaje"
-                    >Url foto Skill</label
-                  >
+                  <input type="number" formControlName="porcentaje" name="porcentaje"
+                    placeholder="{{ skills.porcentaje }}" class="form-control form-control-lg" minlength="0"
+                    maxlength="100" (click)="onSelect($event)" (change)="onChange($event)" />
+                  <label class="form-label" for="porcentaje">Url foto Skill</label>
+                  <input type="file" formControlName="foto_skill" name="foto_skill" id="foto_skill"
+                    class="form-control form-control-xs" (click)="onSelect($event)" (change)="uploadImage($event)"
+                    accept=".jpg,.jpeg,.png" />
+                  <label for="foto_skill">Cargar imagen</label>
+                  <div class="imagen" [ngClass]="{hidden:!file}">
+                    <img [src]="imgService.url" width="200" />
+                  </div>
                 </div>
+
                 <hr />
 
                 <button class="btn btn-outline-light btn-lg px-5" type="submit">
-                  Cargar nueva habilidad
+                  {{
+                  editId === null
+                  ? "Cargar nueva habilidad"
+                  : "Editar habilidad"
+                  }}
                 </button>
                 <p class="mt-3">* campos obligatorios</p>
-                <div
-                  class="d-flex justify-content-center text-center mt-4 pt-1"
-                >
-                  <a href="#!" class="text-white"
-                    ><i class="fab fa-facebook-f fa-lg"></i
-                  ></a>
-                  <a href="#!" class="text-white"
-                    ><i class="fab fa-twitter fa-lg mx-4 px-2"></i
-                  ></a>
-                  <a href="#!" class="text-white"
-                    ><i class="fab fa-google fa-lg"></i
-                  ></a>
+                <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                  <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                  <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                  <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
                 </div>
               </form>
             </div>

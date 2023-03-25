@@ -5,7 +5,7 @@ export class Experiencia {
   fechaIniExp: String;
   fechaFinExp: String;
   descripcionExp: String;
-  imgExp: String;
+  img_exp: String;
 
   constructor(
     idExp: number,
@@ -14,7 +14,7 @@ export class Experiencia {
     fechaIniExp: String,
     fechaFinExp: String,
     descripcionExp: String,
-    imgExp: String
+    img_exp: String
   ) {
     this.idExp = idExp;
     this.tituloExp = tituloExp;
@@ -22,6 +22,6 @@ export class Experiencia {
     this.fechaIniExp = fechaIniExp;
     this.fechaFinExp = fechaFinExp;
     this.descripcionExp = descripcionExp;
-    this.imgExp = imgExp;
+    this.img_exp = img_exp;
   }
 }

@@ -9,11 +9,9 @@ import { SocialComponent } from './components/social/social.component';
 import { NotFound404Component } from './components/not-found404/not-found404.component';
 import { SobreMiComponent } from './pages/about-me/sobre-mi.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
 import { HttpClientModule} from '@angular/common/http';
 import { EditIconComponent } from './components/minicomponents/edit-icon/edit-icon.component';
 import { SkillsComponent } from './components/minicomponents/skills/skills.component';
-
 import { SpinnerComponent } from './components/minicomponents/spinner/spinner.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ExperienciaLaboralComponent } from './pages/experience/experiencia-laboral.component';
@@ -28,6 +26,9 @@ import { NewExperienceComponent } from './pages/new-experience/new-experience.co
 import { NewProjectComponent } from './pages/new-project/new-project.component';
 import { NewSkillComponent } from './pages/new-skill/new-skill.component';
 import { NewIconComponent } from './components/minicomponents/new-icon/new-icon.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 
@@ -61,7 +62,9 @@ import { NewIconComponent } from './components/minicomponents/new-icon/new-icon.
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [],
   bootstrap: [AppComponent]

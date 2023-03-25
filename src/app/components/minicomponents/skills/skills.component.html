@@ -11,22 +11,14 @@
 
   <div class="cardContainer">
     <div class="skillsCard" *ngFor="let skill of skills">
-      <div
-        role="progressbar"
-        aria-valuenow="65"
-        aria-valuemin="0"
-        aria-valuemax="100"
-        [ngStyle]="{ '--value': skill.porcentaje }"
-      ></div>
+      <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
+        [ngStyle]="{ '--value': skill.porcentaje }"></div>
       <h3>{{ skill.nombreSkill }}</h3>
-      <img src="" alt="Logo de lenguaje" />
-      <app-edit-icon
-        [ngClass]="{ hidden: !userLogged, visible: userLogged }"
-      ></app-edit-icon>
-      <app-delete-icon
-        [ngClass]="{ hidden: !userLogged, visible: userLogged }"
-        (click)="handleDelete(skill)"
-      ></app-delete-icon>
+      <img [src]="skill.foto_skill" alt="Logo de lenguaje" class="img-thumbnail" />
+      <app-edit-icon [ngClass]="{ hidden: !userLogged, visible: userLogged }"
+        (click)="handleClick(skill)"></app-edit-icon>
+      <app-delete-icon [ngClass]="{ hidden: !userLogged, visible: userLogged }"
+        (click)="handleDelete(skill)"></app-delete-icon>
     </div>
   </div>
 </div>

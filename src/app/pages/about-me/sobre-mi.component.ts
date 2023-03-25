@@ -28,7 +28,7 @@ export class SobreMiComponent implements OnInit {
     }
     try {
       this.personaService.getPersonas().subscribe((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.length !== 0) {
           this.persona = data[0];
           this.telefonoString = `https://wa.me/2257665721`;
@@ -47,8 +47,10 @@ export class SobreMiComponent implements OnInit {
           this.persona.nombre = 'Nahuel Andrés';
           this.telefonoString = '';
           this.correoString = '';
+          this.persona.url_foto = '../../../assets/IMG_20220713_143637563.jpg';
           this.varclass = !this.varclass;
         }
+        console.log(data);
       });
     } catch (error) {}
   }

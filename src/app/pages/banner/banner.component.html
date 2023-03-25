@@ -2,16 +2,14 @@
   <img
     src="https://c4.wallpaperflare.com/wallpaper/792/460/915/1920x1080-px-code-coding-programming-simple-background-anime-ah-my-goddess-hd-art-wallpaper-preview.jpg"
     alt=""
+    class="container-fluid"
   />
 </div>
 <div class="nav-item-light bg-light">
   <a routerLink="/">Inicio</a>
 </div>
 <div class="down">
-  <div [ngClass]="{ hidden: !userLogged, visible: userLogged }" class="editBox">
-    <span>cambiar fondo</span>
-    <app-edit-icon></app-edit-icon>
-  </div>
+  
   <h1>Bienvenidos</h1>
   <div routerLink="/dashboard">
     <svg
@@ -26,6 +24,7 @@
       />
     </svg>
   </div>
+  <app-sobre-mi></app-sobre-mi>
 </div>
 
 <div class="skillsApp">

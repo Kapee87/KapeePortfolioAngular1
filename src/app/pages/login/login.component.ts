@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { User } from 'src/app/model/User.model';
 import { SessionTimingService } from 'src/app/service/session-timing.service';
 import { TokenServiceService } from 'src/app/service/token.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -13,12 +14,10 @@ import { TokenServiceService } from 'src/app/service/token.service';
 export class LoginComponent implements OnInit {
   form: FormGroup;
   user: User = {
-    email: '',
+    nombreUsuario: '',
     password: '',
   };
-  token: any = {
-    token: '',
-  };
+  token: any = {};
   varclass = true;
 
   constructor(
@@ -29,10 +28,7 @@ export class LoginComponent implements OnInit {
   ) {
     this.form = this.formBuilder.group({
       password: ['', [Validators.required, Validators.minLength(6)]],
-      email: [
-        '',
-        [Validators.required, Validators.minLength(5), Validators.email],
-      ],
+      nombreUsuario: ['', [Validators.required, Validators.minLength(3)]],
     });
   }
 
@@ -44,15 +40,15 @@ export class LoginComponent implements OnInit {
     return this.form.get('password');
   }
 
-  get Mail() {
-    return this.form.get('email');
+  get Name() {
+    return this.form.get('nombreUsuario');
   }
 
   get PasswordValid() {
     return this.Password?.touched && !this.Password?.valid;
   }
-  get MailValid() {
-    return this.Mail?.touched && !this.Mail?.valid;
+  get NameValid() {
+    return this.Name?.touched;
   }
   isVisible() {
     if (this.tokenService.isLogged()) {
@@ -64,15 +60,18 @@ export class LoginComponent implements OnInit {
 
   onEnviar(event: Event) {
     event.preventDefault;
+    // console.log(this.form.valid);
 
     if (this.form.valid) {
-      this.user.email = this.Mail?.value;
+      this.user.nombreUsuario = this.Name?.value;
       this.user.password = this.Password?.value;
       this.tokenService.Login(this.user).subscribe((data) => {
         this.token = data;
-        sessionStorage.setItem('token', this.token.accessToken);
+        // console.log(this.token.token);
+        sessionStorage.setItem('token', this.token.token);
         this.isVisible();
         this.sessionService.SessionTimeOut();
+        Swal.fire('Sesión iniciada', 'Bienvenid@', 'success');
         this.router.navigateByUrl('/');
       });
     } else {

@@ -1,10 +1,9 @@
-export class User{
-    email:String;
-    password:String;
+export class User {
+  nombreUsuario: String;
+  password: String;
 
-    constructor(email:String, password:String){
-        this.email=email;
-        this.password=password;
-    }
-
+  constructor(nombreUsuario: String, password: String) {
+    this.nombreUsuario = nombreUsuario;
+    this.password = password;
+  }
 }

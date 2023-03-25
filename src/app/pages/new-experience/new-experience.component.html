@@ -7,7 +7,11 @@
             <div class="mb-md-5 mt-md-4 pb-5">
               <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <h2 class="fw-bold mb-2 text-uppercase">
-                  Nueva Experiencia Laboral
+                  {{
+                    editId === null
+                      ? "Nueva Experiencia Laboral"
+                      : "Editar Experiencia Laboral"
+                  }}
                 </h2>
                 <div class="form-outline form-white mb-4">
                   <input
@@ -71,11 +75,24 @@
                   <label class="form-label" for="descripcionExp"
                     >Descripción*</label
                   >
+                  <input type="file" formControlName="img_exp" name="img_exp" id="img_exp"
+                  class="form-control form-control-xs" (click)="onSelect($event)" (change)="uploadImage($event)"
+                  accept=".jpg,.jpeg,.png" />
+                <label for="img_exp">Cargar imagen</label>
+                <div class="imagen" [ngClass]="{hidden:!file}">
+                  <img [src]="imgService.url" width="200" />
                 </div>
+                </div>
+
                 <hr />
 
                 <button class="btn btn-outline-light btn-lg px-5" type="submit">
-                  Cargar nueva experiencia
+                  {{
+                    editId === null
+                      ? "Cargar nueva experiencia"
+                      : "Editar Experiencia"
+                  }}
+                  
                 </button>
                 <p class="mt-3">* campos obligatorios</p>
                 <div
