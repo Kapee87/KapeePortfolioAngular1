@@ -38,7 +38,7 @@ export class SessionTimingService {
           return;
         }
       });
-    }, 120000);
+    }, 360000);
 
     this.timeOutWarning = setTimeout(() => {
       let timerInterval: string | number | undefined;
@@ -58,7 +58,7 @@ export class SessionTimingService {
           console.log('I was closed by the timer');
         }
       });
-    }, 90000);
+    }, 330000);
   }
   public extendSession() {
     clearTimeout(this.sessionTimeOut);

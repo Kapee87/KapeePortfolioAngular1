@@ -3,7 +3,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Persona } from '../model/persona.model';
 import { ConexionService } from './conexion.service';
-import { TokenServiceService } from './token.service';
 
 @Injectable({
   providedIn: 'root',
@@ -24,8 +23,7 @@ export class PersonaService {
 
   constructor(
     private httpClient: HttpClient,
-    private urlService: ConexionService,
-    private tokenService: TokenServiceService
+    private urlService: ConexionService
   ) {}
 
   public getPersona(id: number): Observable<Persona> {
