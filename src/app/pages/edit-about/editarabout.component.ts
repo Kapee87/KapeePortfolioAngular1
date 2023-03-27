@@ -128,6 +128,8 @@ export class EditaraboutComponent implements OnInit {
   }
 
   onEnviar(event: Event) {
+    console.log('on enviar');
+
     event.preventDefault();
     this.file
       ? (this.persona.url_foto = this.imgService.url)
@@ -149,7 +151,7 @@ export class EditaraboutComponent implements OnInit {
                   'los datos fueron correctamente actualizados',
                   'success'
                 );
-                // this.router.navigateByUrl('/sobre-mi');
+                this.router.navigateByUrl('/sobre-mi');
               }
             });
         } else {
@@ -159,7 +161,7 @@ export class EditaraboutComponent implements OnInit {
         }
       });
     } else {
-      // console.log(this.persona, this.form);
+      console.log(this.persona, this.form);
       Swal.fire(
         'Algún campo requerido está vacío o se produjo un error',
         'Complete o modifique los campos de datos, o vuelva atrás e intente de nuevo'
