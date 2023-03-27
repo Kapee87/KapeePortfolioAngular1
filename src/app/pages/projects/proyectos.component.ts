@@ -33,7 +33,7 @@ export class ProyectosComponent implements OnInit {
   }
 
   handleClick(Proyectos: any) {
-    this.router.navigateByUrl('/nuevoProyecto');
+    this.router.navigateByUrl(`/nuevoProyecto?id=${Proyectos.idProyecto}`);
   }
   handleDelete(Proyectos: any) {
     this.service.delete(Proyectos.idProyecto).subscribe((data) => {

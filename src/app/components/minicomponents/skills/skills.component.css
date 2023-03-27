@@ -13,21 +13,21 @@
   inherits: false;
   initial-value: 0;
 }
-h1 {
-  font-style: oblique;
-  margin-bottom: 1rem;
-  font-size: 6rem;
-  font-family: "Allison", cursive;
-}
 .skills {
   width: 100vw;
-  height: 100vh;
+  padding: 5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 2rem;
   color: aliceblue;
   padding-top: 5rem;
+}
+.skills h1 {
+  font-style: oblique;
+  margin-bottom: 1rem;
+  font-size: 6rem;
+  font-family: "Allison", cursive;
 }
 .skillsCard {
   display: flex;
@@ -42,6 +42,11 @@ h1 {
   -webkit-backdrop-filter: blur(5px);
   transform: none;
   transition: all ease-in-out 1s;
+}
+
+.skillsCard img {
+  max-width: 5rem;
+  max-height: 3rem;
 }
 .cardContainer {
   display: flex;
@@ -121,6 +126,9 @@ div[role="progressbar"]::before {
 }
 
 @media screen and (max-width: 540px) {
+  .skills{
+    padding: .2rem;
+  }
   .skillsCard {
     transform: scale(0.7);
     transition: all ease-in-out 1s;
@@ -130,5 +138,8 @@ div[role="progressbar"]::before {
     width: 100vw;
     gap: 0;
     padding: 0;
+  }
+  .skills h1{
+    transform: scale(.3);
   }
 }

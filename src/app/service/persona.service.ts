@@ -1,17 +1,19 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Persona } from '../model/persona.model';
+import { ConexionService } from './conexion.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PersonaService {
-  URL = 'https://springbootbackendap-production.up.railway.app/personas/';
+  URL = `${this.urlService.getPersonaUrl()}`;
+
   personaVacía = {
     nombre: 'Nahuel Andrés',
     apellido: 'Montaner',
-    fechaNac: '16/10/1987',
+    fecha_nac: '16/10/1987',
     telefono: '+54-9-02257-15-665721',
     correo: 'namontaner87@gmail.com',
     descripcion:
@@ -19,29 +21,32 @@ export class PersonaService {
     urlFoto: 'aca va la url',
   };
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(
+    private httpClient: HttpClient,
+    private urlService: ConexionService
+  ) {}
 
   public getPersona(id: number): Observable<Persona> {
-    return this.httpClient.get<Persona>(`${this.URL}traer/${id}`);
+    return this.httpClient.get<Persona>(`${this.URL}/traer/${id}`);
   }
 
   public getPersonas(): Observable<Persona[]> {
-    return this.httpClient.get<Persona[]>(`${this.URL}traer`);
+    return this.httpClient.get<Persona[]>(`${this.URL}/lista`);
   }
   public save(persona: Persona): Observable<any> {
-    return this.httpClient.post<any>(`${this.URL}crear`, persona);
+    return this.httpClient.post<any>(`${this.URL}/crear`, persona);
   }
   public createEmpty(): Observable<any> {
-    return this.httpClient.post<any>(`${this.URL}crear`, this.personaVacía);
+    return this.httpClient.post<any>(`${this.URL}/crear`, this.personaVacía);
   }
 
   public update(id: number | undefined, Persona: Persona): Observable<any> {
-    return this.httpClient.put<any>(`${this.URL}editar/${id}`, Persona);
+    return this.httpClient.put<any>(`${this.URL}/editar/${id}`, Persona);
   }
   public delete(id: number): Observable<any> {
-    return this.httpClient.delete<any>(`${this.URL}borrar/${id}`);
+    return this.httpClient.delete<any>(`${this.URL}/borrar/${id}`);
   }
   public deleteAll(id: number): Observable<any> {
-    return this.httpClient.delete<any>(`${this.URL}vaciar`);
+    return this.httpClient.delete<any>(`${this.URL}/vaciar`);
   }
 }

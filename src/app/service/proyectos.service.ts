@@ -2,28 +2,35 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Proyectos } from '../model/proyectos.model';
+import { ConexionService } from './conexion.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProyectosService {
-  URL = 'https://springbootbackendap-production.up.railway.app/proyectos/';
+  URL = `${this.urlService.getProyectosUrl()}`;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(
+    private httpClient: HttpClient,
+    private urlService: ConexionService
+  ) {}
 
-  public getProyectos(): Observable<Proyectos[]> {
-    return this.httpClient.get<Proyectos[]>(this.URL + 'traerLista');
+  public getProyectos(): Observable<any> {
+    return this.httpClient.get<any>(this.URL + '/lista');
+  }
+  public getProyectoById(id: number): Observable<any> {
+    return this.httpClient.get<any>(`${this.URL}/traer/${id}`);
   }
   public save(proyectos: Proyectos) {
-    return this.httpClient.post(`${this.URL}crear`, proyectos);
+    return this.httpClient.post(`${this.URL}/crear`, proyectos);
   }
   public update(id: number, proyectos: Proyectos): Observable<any> {
-    return this.httpClient.put<any>(`${this.URL}editar/${id}`, proyectos);
+    return this.httpClient.put<any>(`${this.URL}/editar/${id}`, proyectos);
   }
   public delete(id: number): Observable<any> {
-    return this.httpClient.delete<any>(`${this.URL}borrar/${id}`);
+    return this.httpClient.delete<any>(`${this.URL}/borrar/${id}`);
   }
   public deleteAll(id: number): Observable<any> {
-    return this.httpClient.delete<any>(`${this.URL}vaciar`);
+    return this.httpClient.delete<any>(`${this.URL}/vaciar`);
   }
 }

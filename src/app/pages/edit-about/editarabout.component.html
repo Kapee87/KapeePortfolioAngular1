@@ -1,8 +1,5 @@
 <app-spinner [ngClass]="{ hidden: !varclass, visible: varclass }"></app-spinner>
-<section
-  class="vh-100 pt-5"
-  [ngClass]="{ hidden: varclass, visible: !varclass }"
->
+<section class="vh-100 pt-5" [ngClass]="{ hidden: varclass, visible: !varclass }">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -12,75 +9,34 @@
               <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <h2 class="fw-bold mb-2 text-uppercase">Editar Sobre mí</h2>
                 <div class="form-outline form-white mb-4">
-                  <input
-                    type="text"
-                    formControlName="nombre"
-                    name="nombre"
-                    placeholder="{{ persona.nombre }}"
-                    class="form-control form-control-lg"
-                    (click)="onSelect($event)"
-                    (change)="onChange($event)"
-                  />
+                  <input type="text" formControlName="nombre" name="nombre" placeholder="{{ persona.nombre }}"
+                    class="form-control form-control-lg" (click)="onSelect($event)" (change)="onChange($event)" />
                   <label class="form-label" for="nombre">Nombre</label>
-                  <input
-                    type="text"
-                    formControlName="apellido"
-                    name="apellido"
-                    placeholder="{{ persona.apellido }}"
-                    class="form-control form-control-lg"
-                    (click)="onSelect($event)"
-                    (change)="onChange($event)"
-                  />
+                  <input type="text" formControlName="apellido" name="apellido" placeholder="{{ persona.apellido }}"
+                    class="form-control form-control-lg" (click)="onSelect($event)" (change)="onChange($event)" />
                   <label class="form-label" for="apellido">Apellido</label>
-                  <input
-                    type="date"
-                    name="fechaNac"
-                    formControlName="fechaNac"
-                    class="form-control form-control-lg"
-                    (click)="onSelect($event)"
-                    (change)="onChange($event)"
-                  />
-                  <label class="form-label" for="fechaNac"
-                    >Fecha de nacimiento</label
-                  >
-                  <input
-                    type="tel"
-                    placeholder="{{ persona.telefono }}"
-                    name="telefono"
-                    formControlName="telefono"
-                    class="form-control form-control-lg"
-                    (click)="onSelect($event)"
-                    (change)="onChange($event)"
-                  />
+                  <input type="date" name="fecha_nac" formControlName="fecha_nac" class="form-control form-control-lg"
+                    (click)="onSelect($event)" (change)="onChange($event)" />
+                  <label class="form-label" for="fecha_nac">Fecha de nacimiento</label>
+                  <input type="tel" placeholder="{{ persona.telefono }}" name="telefono" formControlName="telefono"
+                    class="form-control form-control-lg" (click)="onSelect($event)" (change)="onChange($event)" />
                   <label class="form-label" for="telefono">Telefono</label>
-                  <input
-                    type="text"
-                    formControlName="correo"
-                    name="correo"
-                    placeholder="{{ persona.correo }}"
-                    class="form-control form-control-lg"
-                    (click)="onSelect($event)"
-                    (change)="onChange($event)"
-                  />
-                  <label class="form-label" for="correo"
-                    >Correo electrónico</label
-                  >
-                  <textarea
-                    type="text"
-                    formControlName="descripcion"
-                    name="descripcion"
-                    placeholder="{{ persona.descripcion }}"
-                    class="form-control form-control-xs descripcion"
-                    (click)="onSelect($event)"
-                    (change)="onChange($event)"
-                  ></textarea>
-                  <label class="form-label" for="descripcion"
-                    >Descripcion</label
-                  >
+                  <input type="text" formControlName="correo" name="correo" placeholder="{{ persona.correo }}"
+                    class="form-control form-control-lg" (click)="onSelect($event)" (change)="onChange($event)" />
+                  <label class="form-label" for="correo">Correo electrónico</label>
+                  <textarea type="text" formControlName="descripcion" name="descripcion"
+                    placeholder="{{ persona.descripcion }}" class="form-control form-control-xs descripcion"
+                    (click)="onSelect($event)" (change)="onChange($event)"></textarea>
+                  <label class="form-label" for="descripcion">Descripcion</label>
+                  <input type="file" formControlName="url_foto" name="url_foto" id="url_foto"
+                    class="form-control form-control-xs" (click)="onSelect($event)" (change)="uploadImage($event)"
+                    accept=".jpg,.jpeg,.png" />
+                  <label for="url_foto">Cargar imagen</label>
+                  <div class="imagen" [ngClass]="{hidden:!file}">
+                    <img [src]="imgService.url" width="200" />
+                  </div>
                   <hr />
-                  <app-delete-icon
-                    (click)="onCleanUp($event)"
-                  ></app-delete-icon>
+                  <app-delete-icon (click)="onCleanUp($event)"></app-delete-icon>
                   <span>Vaciar datos</span>
                 </div>
                 <hr />

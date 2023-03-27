@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Skills } from 'src/app/model/skills.model';
 import { SkillsService } from 'src/app/service/skills.service';
 import { TokenServiceService } from 'src/app/service/token.service';
@@ -16,7 +17,8 @@ export class SkillsComponent implements OnInit {
 
   constructor(
     public service: SkillsService,
-    private tokenService: TokenServiceService
+    private tokenService: TokenServiceService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -25,12 +27,17 @@ export class SkillsComponent implements OnInit {
     }
     this.service.getSkills().subscribe((data) => {
       this.skills = data;
+      // console.log(data);
+
       if (data !== null || data !== undefined) {
         setTimeout(() => {
           this.varclass = !this.varclass;
         }, 500);
       }
     });
+  }
+  handleClick(skill: any) {
+    this.router.navigateByUrl(`/newSkill?id=${skill.idSkill}`);
   }
   handleDelete(Skill: any) {
     this.service.delete(Skill.idSkill).subscribe((data) => {

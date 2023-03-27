@@ -5,19 +5,19 @@ font-family: 'Bad Script', cursive; */
 
 .sobre-mi {
   display: flex;
-
-  text-align: right;
+  align-items: center;
+  /* text-align: right; */
   /* color: #24272a;
     text-shadow: #8fa5a5cc 2px 2px 10px; */
   color: rgb(208, 214, 219);
   text-shadow: rgba(0, 0, 0, 0.358) 3px 3px 5px;
-  align-items: center;
-  padding: 10rem 10rem;
+  padding: 10rem 3rem;
   padding-top: 10rem;
   font-size: 1rem;
   font-family: "Averia Sans Libre", cursive;
   font-weight: bolder;
   gap: 5rem;
+  flex-wrap: wrap;
 }
 
 .sobre-mi img:hover {
@@ -40,6 +40,7 @@ font-family: 'Bad Script', cursive; */
 .sobre-mi .img-container {
   display: flex;
   align-self: flex-start;
+  order: 1;
 }
 
 .sobre-mi img {
@@ -54,6 +55,13 @@ font-family: 'Bad Script', cursive; */
   text-decoration: none;
   color: #7a8288;
   text-shadow: none;
+}
+
+.titleContainer {
+  order: 2;
+}
+.textContainer {
+  order: 3;
 }
 
 .fondieu {

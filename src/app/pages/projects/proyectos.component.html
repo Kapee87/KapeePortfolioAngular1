@@ -1,11 +1,5 @@
-<app-spinner
-  [ngClass]="{ hidden: !varclass, visible: varclass }"
-  class="fondieu"
-></app-spinner>
-<div
-  class="proyectos varclass"
-  [ngClass]="{ hidden: varclass, visible: !varclass }"
->
+<app-spinner [ngClass]="{ hidden: !varclass, visible: varclass }" class="fondieu"></app-spinner>
+<div class="proyectos varclass" [ngClass]="{ hidden: varclass, visible: !varclass }">
   <h1>Proyectos</h1>
   <div [ngClass]="{ hidden: !userLogged, visible: userLogged }">
     <div class="nuevoProyecto">
@@ -15,17 +9,12 @@
   </div>
 
   <div class="cardproy" *ngFor="let proyecto of Proyectos">
-    <app-edit-icon
-      class="editProyecto"
-      (click)="handleClick(proyecto)"
-      [ngClass]="{ hidden: !userLogged, visible: userLogged }"
-    ></app-edit-icon>
-    <app-delete-icon
-      (click)="handleDelete(proyecto)"
-      [ngClass]="{ hidden: !userLogged, visible: userLogged }"
-    ></app-delete-icon>
+    <app-edit-icon class="editProyecto" (click)="handleClick(proyecto)"
+      [ngClass]="{ hidden: !userLogged, visible: userLogged }"></app-edit-icon>
+    <app-delete-icon (click)="handleDelete(proyecto)"
+      [ngClass]="{ hidden: !userLogged, visible: userLogged }"></app-delete-icon>
     <div class="img-container-proy">
-      <img src="../../../assets/imt.png" alt="Logo de Empresa" />
+      <img [src]="proyecto.img_proyecto" alt="Logo de Empresa" />
       <h2 id="nombre">{{ proyecto.nombreProyecto }}</h2>
     </div>
     <div class="text-container">

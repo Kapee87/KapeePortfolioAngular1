@@ -1,26 +1,29 @@
 <!-- checkar porque se rompe el estilo agregando el spinner como está -->
-<app-spinner [ngClass]="{'hidden':!varclass, 'visible':varclass}" class="fondieu"></app-spinner>
-<div class="sobre-mi" [ngClass]="{'hidden':varclass, 'visible':!varclass }">
-<div class="img-container">
-  <img src="../../../assets/IMG_20220713_143637563.jpg" alt="foto" />
-  <!-- <img src={{persona.urlFoto}} alt="foto" /> -->
-</div>
-  <div>
-    <h1>Sobre mí</h1>
-    <app-edit-icon routerLink="/editarSobreMi" [ngClass]="{'hidden':!userLogged, 'visible':userLogged }"></app-edit-icon>
-    <h2 id="nombre">{{persona.nombre}} {{persona.apellido}}</h2>
-    <h6>fullstack web developer</h6>
-    <span>
-      {{persona.descripcion}}
-      <hr>
-      Fecha de Nacimiento: {{persona.fechaNac}}
-      <hr>
-      Correo electrónico: <a [href]="correoString">{{persona.correo }} </a>
-      <hr>
-      teléfono: <a [href]="telefonoString">{{persona.telefono}}</a>
-    </span>
-      
-      
+<app-spinner [ngClass]="{ hidden: !varclass, visible: varclass }" class="fondieu"></app-spinner>
+<div class="sobre-mi" [ngClass]="{ hidden: varclass, visible: !varclass }">
+  <div class="img-container">
+    <img [src]=" persona.url_foto"
+      alt="Foto de usuario(si no se muestra, intente cargar una en la sección de edición)" />
   </div>
+  <div class="titleContainer">
+    <h1>Sobre mí</h1>
+    <app-edit-icon routerLink="/editarSobreMi" [ngClass]="{ hidden: !userLogged, visible: userLogged }"
+      class="justify-content-end"></app-edit-icon>
+    <h2 id="nombre">{{ persona.nombre }} {{ persona.apellido }}</h2>
+    <h6>fullstack web developer</h6>
+    <hr />
+  </div>
+  <span class="textContainer">
+    <p>{{ persona.descripcion }}</p>
+    <hr />
+    <p>Fecha de Nacimiento: {{ persona.fecha_nac }}</p>
+    <hr />
+    <p>
+      Correo electrónico: <a [href]="correoString">{{ persona.correo }} </a>
+    </p>
+    <hr />
+    <p>
+      teléfono: <a [href]="telefonoString">{{ persona.telefono }}</a>
+    </p>
+  </span>
 </div>
-

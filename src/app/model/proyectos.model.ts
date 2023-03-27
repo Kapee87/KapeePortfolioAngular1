@@ -3,7 +3,7 @@ export class Proyectos {
   nombreProyecto: String;
   descripcionProyecto: String;
   fechaProyecto: String;
-  imgProyecto: String;
+  img_proyecto: String;
   urlProyecto: String;
 
   constructor(
@@ -11,14 +11,14 @@ export class Proyectos {
     nombreProyecto: String,
     descripcionProyecto: String,
     fechaProyecto: String,
-    imgProyecto: String,
+    img_proyecto: String,
     urlProyecto: String
   ) {
     this.idProyecto = idProyecto;
     this.nombreProyecto = nombreProyecto;
     this.descripcionProyecto = descripcionProyecto;
     this.fechaProyecto = fechaProyecto;
-    this.imgProyecto = imgProyecto;
+    this.img_proyecto = img_proyecto;
     this.urlProyecto = urlProyecto;
   }
 }

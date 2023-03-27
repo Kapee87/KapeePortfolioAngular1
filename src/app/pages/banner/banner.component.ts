@@ -13,6 +13,6 @@ export class BannerComponent implements OnInit {
 
   ngOnInit(): void {
     this.userLogged = this.service.isLogged();
-    console.log(this.userLogged)
+    // console.log(this.service.getToken());
   }
 }

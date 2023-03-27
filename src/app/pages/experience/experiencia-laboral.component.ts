@@ -34,7 +34,7 @@ export class ExperienciaLaboralComponent implements OnInit {
   }
 
   handleClick(exp: any) {
-    this.router.navigateByUrl('/nuevaExperiencia');
+    this.router.navigateByUrl(`/nuevaExperiencia?id=${exp.idExp}`);
   }
   handleDelete(exp: any) {
     this.service.delete(exp.idExp).subscribe((data) => {

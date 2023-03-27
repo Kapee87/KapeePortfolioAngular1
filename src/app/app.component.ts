@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import Swal from 'sweetalert2';
 import { SessionTimingService } from './service/session-timing.service';
 import { TokenServiceService } from './service/token.service';
 

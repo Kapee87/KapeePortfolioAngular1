@@ -14,43 +14,56 @@ export class SessionTimingService {
     this.sessionTimeOut = setTimeout(() => {
       sessionStorage.clear();
       clearInterval(this.sessionTimeOut);
+      clearInterval(this.timeOutWarning);
+      let res: any = false;
       Swal.fire({
         title: 'Sesión expirada',
-        html: 'Expiró la sesión, estás por ser redireccionado al Login',
+        html: 'Expiró la sesión, estás por ser redireccionado al inicio',
         timer: 10000,
-        showCancelButton: true,
+        showDenyButton: true,
         confirmButtonText: 'Ok, ir al login',
         timerProgressBar: true,
-      })
-        .then((result) => {
-          if (result.isConfirmed) {
-            this.router.navigateByUrl('/login', { skipLocationChange: false });
-          } else {
-            this.router.navigateByUrl('/', { skipLocationChange: false });
-          }
-        })
-        .then(() => {
+      }).then((result) => {
+        this.router.url === '/login' ? location.reload : '';
+        if (result.isConfirmed) {
+          console.log('is confirmed');
           this.router.navigateByUrl('/login', { skipLocationChange: false });
-        });
-    }, 300000);
+          return;
+        } else if (result.isDismissed) {
+          console.log('dismiss');
+          this.router.navigateByUrl('/inicio');
+          return;
+        } else if (result.isDenied) {
+          location.reload();
+          return;
+        }
+      });
+    }, 360000);
 
     this.timeOutWarning = setTimeout(() => {
       let timerInterval: string | number | undefined;
       Swal.fire({
         title: 'Auto close alert!',
-        html: 'En 1 minuto se cerrará la sesión de forma automática...',
+        html: 'En menos de 1 minuto se cerrará la sesión de forma automática...',
         timer: 3000,
         timerProgressBar: true,
+        confirmButtonText: 'ok',
+        denyButtonText: 'extender sesión',
+        showDenyButton: true,
       }).then((result) => {
-        /* Read more about handling dismissals below */
+        if (result.isDenied) {
+          this.extendSession();
+        }
         if (result.dismiss === Swal.DismissReason.timer) {
           console.log('I was closed by the timer');
         }
       });
-    }, 240000);
+    }, 330000);
   }
   public extendSession() {
     clearTimeout(this.sessionTimeOut);
     clearTimeout(this.timeOutWarning);
+    this.SessionTimeOut();
+    Swal.fire('Tiempo de sesion extendido');
   }
 }
