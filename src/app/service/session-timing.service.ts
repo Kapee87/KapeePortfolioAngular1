@@ -58,7 +58,7 @@ export class SessionTimingService {
           console.log('I was closed by the timer');
         }
       });
-    }, 330000);
+    }, 34000);
   }
   public extendSession() {
     clearTimeout(this.sessionTimeOut);

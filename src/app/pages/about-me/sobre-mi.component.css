@@ -41,13 +41,22 @@ font-family: 'Bad Script', cursive; */
   display: flex;
   align-self: flex-start;
   order: 1;
+  border-radius: 12%;
+  box-shadow: #90acca6b 2px 1px 10px;
+  overflow: hidden;
+  min-width: 18rem;
+  max-width: 33rem;
+  min-height: 13rem;
+  max-height: 22rem;
+  object-fit:cover;
 }
 
 .sobre-mi img {
-  width: 35vw;
-  height: 45vh;
-  border-radius: 20%;
-  box-shadow: #90acca6b 2px 1px 10px;
+  min-width: 18rem;
+  max-width: 30rem;
+  min-height: 14rem;
+  max-height: 20rem;
+  object-fit:cover;
   opacity: 0.8;
   transition: all 0.8s;
 }

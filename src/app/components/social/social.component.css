@@ -9,6 +9,10 @@
     border-radius: 50%;
     border: solid #222;
 }
+.offcanvas-body #foti::after{
+    content:"Login";
+}
+
 
 .offcanvas-body div {
     margin-top: .5rem;
@@ -105,4 +109,9 @@ a{
 .offcanvas-body{
     padding: 0;
 }
+}
+
+
+#loginLink:hover::after{
+    content: "Iniciar Sesión";
 }
