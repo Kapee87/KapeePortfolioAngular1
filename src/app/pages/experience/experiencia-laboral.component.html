@@ -1,5 +1,11 @@
-<app-spinner [ngClass]="{ hidden: !varclass, visible: varclass }" class="fondieu"></app-spinner>
-<div class="experiencia varclass" [ngClass]="{ hidden: varclass, visible: !varclass }">
+<app-spinner
+  [ngClass]="{ hidden: !varclass, visible: varclass }"
+  class="fondieu"
+></app-spinner>
+<div
+  class="experiencia varclass"
+  [ngClass]="{ hidden: varclass, visible: !varclass }"
+>
   <h1>Experiencia Laboral</h1>
   <div [ngClass]="{ hidden: !userLogged, visible: userLogged }">
     <div class="nuevaExp">
@@ -9,10 +15,15 @@
   </div>
 
   <div class="cardexp" *ngFor="let exp of experiencia">
-    <app-edit-icon class="editExp" (click)="handleClick(exp)"
-      [ngClass]="{ hidden: !userLogged, visible: userLogged }"></app-edit-icon>
-    <app-delete-icon (click)="handleDelete(exp)"
-      [ngClass]="{ hidden: !userLogged, visible: userLogged }"></app-delete-icon>
+    <app-edit-icon
+      class="editExp"
+      (click)="handleClick(exp)"
+      [ngClass]="{ hidden: !userLogged, visible: userLogged }"
+    ></app-edit-icon>
+    <app-delete-icon
+      (click)="handleDelete(exp)"
+      [ngClass]="{ hidden: !userLogged, visible: userLogged }"
+    ></app-delete-icon>
     <div class="container-fluid">
       <div class="img-container-exp">
         <img [src]="exp.img_exp" alt="Logo de Empresa" />
@@ -22,7 +33,8 @@
     <div class="text-container">
       <span>
         <h6>
-          <p>Puesto:</p>{{ exp.tituloExp }}
+          <p>Puesto:</p>
+          {{ exp.tituloExp }}
         </h6>
       </span>
       <span>

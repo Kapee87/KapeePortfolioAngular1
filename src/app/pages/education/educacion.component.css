@@ -8,7 +8,7 @@ font-family: 'Bad Script', cursive; */
     flex-direction: column;
     text-align: right;
     padding: 10rem 10rem;
-    padding-top: 10rem;
+    padding-top: 30rem;
     font-size: 1.5rem;
     gap: 2rem;
   }
@@ -58,7 +58,7 @@ font-family: 'Bad Script', cursive; */
     margin-bottom: 1rem;
     font-size: 6rem;
     font-family: "Allison", cursive;
-    padding-right: 15rem;
+    padding-right: 2rem;
   }
   .educacion div h2 {
     margin-bottom: 1rem;
@@ -161,6 +161,7 @@ font-family: 'Bad Script', cursive; */
   @media screen and (max-width: 450px) {
     .educacion {
       padding: 1rem 1rem;
+      padding-top: 3rem;
     }
     .educacion h1 {
       transform: scale(0.5);

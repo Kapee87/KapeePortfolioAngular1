@@ -22,31 +22,19 @@ export class EducacionComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    console.log(this.varclass);
+
     if (this.tokenService.isLogged()) {
       this.userLogged = true;
-      this.session.SessionTimeOut();
     }
-    try {
-      this.service.lista().subscribe(
-        (data) => {
-          this.educacion = data;
-          console.log(data);
-
-          if (data.length !== 0) {
-            setTimeout(() => {
-              this.varclass = !this.varclass;
-            }, 500);
-          }
-        },
-        (err) => {
-          console.warn(err);
-          this.varclass = !this.varclass;
-        }
-      );
-    } catch (error) {
-      console.warn(error);
-      this.varclass = !this.varclass;
-    }
+    this.service.lista().subscribe((data) => {
+      this.educacion = data;
+      console.log(data);
+      console.log(this.varclass);
+      setTimeout(() => {
+        this.varclass = !this.varclass;
+      }, 500);
+    });
   }
 
   handleClick(edu: any) {

@@ -1,5 +1,11 @@
-<app-spinner [ngClass]="{ hidden: !varclass, visible: varclass }" class="fondieu"></app-spinner>
-<div class="educacion varclass" [ngClass]="{ hidden: varclass, visible: !varclass }">
+<app-spinner
+  [ngClass]="{ hidden: !varclass, visible: varclass }"
+  class="fondieu"
+></app-spinner>
+<div
+  class="educacion varclass"
+  [ngClass]="{ hidden: varclass, visible: !varclass }"
+>
   <h1>Educacion</h1>
   <div [ngClass]="{ hidden: !userLogged, visible: userLogged }">
     <div class="nuevaEdu">
@@ -9,17 +15,23 @@
   </div>
 
   <div class="cardedu" *ngFor="let edu of educacion">
-    <app-edit-icon class="editEdu" (click)="handleClick(edu)"
-      [ngClass]="{ hidden: !userLogged, visible: userLogged }"></app-edit-icon>
-    <app-delete-icon (click)="handleDelete(edu)"
-      [ngClass]="{ hidden: !userLogged, visible: userLogged }"></app-delete-icon>
+    <app-edit-icon
+      class="editEdu"
+      (click)="handleClick(edu)"
+      [ngClass]="{ hidden: !userLogged, visible: userLogged }"
+    ></app-edit-icon>
+    <app-delete-icon
+      (click)="handleDelete(edu)"
+      [ngClass]="{ hidden: !userLogged, visible: userLogged }"
+    ></app-delete-icon>
     <div class="img-container-edu">
       <img [src]="edu.img_edu" alt="Logo de Empresa" />
       <h2 id="nombre">{{ edu.institucionEdu }}</h2>
     </div>
     <div class="text-container">
       <h6>Puesto: {{ edu.tituloEdu }}</h6>
-      <span>fecha de inicio: {{ edu.fechaIniEdu }} - {{ edu.fechaFinEdu }}
+      <span
+        >fecha de inicio: {{ edu.fechaIniEdu }} - {{ edu.fechaFinEdu }}
       </span>
       <span>
         <p>
