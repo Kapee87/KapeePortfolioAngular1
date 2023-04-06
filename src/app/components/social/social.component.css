@@ -56,11 +56,14 @@ a:hover {
 }
 
 #burger {
-    position: absolute;
-    right: 1rem;
-    top: 2vh;
+    
     color: aliceblue;
     border-color: aliceblue;
+}
+.btn-close{
+    background-color: aliceblue;
+    width: 2rem;
+    height: 1rem;
 }
 
 @media screen and (max-width: 740px) {
@@ -73,7 +76,7 @@ a:hover {
     }
 
     .roundContainer {
-        width: 4rem;
+        width: inherit;
         flex-direction: column;
         align-content: center;
     }
@@ -102,12 +105,16 @@ a{
     transition: all .5s;
     transform: scale(.8);
     margin: 0;
+    text-align: center;
 }
 .offcanvas-body div{
     gap: 0;
 }
 .offcanvas-body{
     padding: 0;
+}
+.roundContainer{
+    flex-direction: column;
 }
 }
 

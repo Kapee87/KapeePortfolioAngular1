@@ -1,16 +1,22 @@
-.row{
+.foot{
     background: #35393C;
     position: fixed;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
 }
 
 footer{
+    width: 100%;
     color:aliceblue;
     font-size: 1rem;
     display: flex;
     flex-direction: column;
     text-align: center;
     box-shadow: 1px -1px 5px rgba(240, 248, 255, 0.358);
-
+}
+@media screen and (max-width:375px) {
+    .foot p{
+        transform: scale(0.8);
+        margin: 0;
+    }
 }

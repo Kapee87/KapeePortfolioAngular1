@@ -6,23 +6,22 @@
       alt="Foto de usuario(si no se muestra, intente cargar una en la sección de edición)" />
   </div>
   <div class="titleContainer">
-    <h1>Sobre mí</h1>
     <app-edit-icon routerLink="/editarSobreMi" [ngClass]="{ hidden: !userLogged, visible: userLogged }"
-      class="justify-content-end"></app-edit-icon>
-    <h2 id="nombre">{{ persona.nombre }} {{ persona.apellido }}</h2>
-    <h6>fullstack web developer</h6>
+      class="justify-content-md-end justify-content-center"></app-edit-icon>
+    <h1 id="nombre">{{ persona.nombre }} {{ persona.apellido }}</h1>
+    <h6 class="templateText">fullstack web developer</h6>
     <hr />
   </div>
   <span class="textContainer">
     <p>{{ persona.descripcion }}</p>
     <hr />
-    <p>Fecha de Nacimiento: {{ persona.fecha_nac }}</p>
+    <p class="templateText">Fecha de Nacimiento: <span>{{ persona.fecha_nac }}</span></p>
     <hr />
-    <p>
+    <p class="templateText">
       Correo electrónico: <a [href]="correoString">{{ persona.correo }} </a>
     </p>
     <hr />
-    <p>
+    <p class="templateText">
       teléfono: <a [href]="telefonoString">{{ persona.telefono }}</a>
     </p>
   </span>

@@ -20,7 +20,6 @@ import { NewSkillComponent } from './pages/new-skill/new-skill.component';
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   { path: 'inicio', component: BannerComponent },
-  { path: 'dashboard', component: IntroComponent },
   { path: 'experiencia-laboral', component: ExperienciaLaboralComponent },
   { path: 'educacion', component: EducacionComponent },
   { path: 'sobre-mi', component: SobreMiComponent },

@@ -1,66 +1,53 @@
-.header {
-    position: fixed;
-    width: 100vw;
-    z-index: 100;
-    padding: 0 1rem;
-    box-shadow: 1px 1px 5px rgba(240, 248, 255, 0.358);
+header {
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
+  padding: 0 2vw;
+  box-shadow: 1px 1px 5px rgba(240, 248, 255, 0.358);
+  background-color: #35393c;
+
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  gap: 10vw;
+  min-height: max-content;
+  width: 100%;
 }
 
-div, .header div {
-    background-color: #35393C;
-    display: flex;
-    align-items: center;
-    justify-content:space-between ;
-    gap: -5rem;
+
+header a {
+  text-decoration: none;
+  font-family: "Bad Script", cursive;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bolder;
+  padding: 0.5rem;
+  display:grid;
+  color: rgb(208, 214, 219);
+  text-shadow: black 3px 3px 5px;
 }
 
-div a, .header div a {
-    text-decoration: none;
-    font-family: 'Bad Script', cursive;
-    font-size: 2rem;
-    text-align: center;
-    font-weight: bolder;
-    padding: .5rem;
-    display: inline-block;
-    color: rgb(208, 214, 219);
-    text-shadow: black 3px 3px 5px;
+header a:hover {
+  color: aliceblue;
+  text-shadow: none;
 }
 
-.header a {
-    margin-left: -3rem;
-}
-
-.header div a:hover {
-    color: aliceblue;
-    text-shadow: none;
-}
-.header div{
-    width: 100%;
-justify-content: center;
-padding-right:3rem;
-}
 
 @media screen and (max-width: 800px) {
-.header{
-    height: 4rem;
-
-}
-.header div{
-    justify-content: end;
-}
-    div,
-    .header, .header
-    div a {
-        padding: 0;
-        font-size: .9rem;
-    }
+  
+  
+  header,
+  header a {
+    padding: 0;
+    font-size: 0.9rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
-    div,
-    .header, .header
-    div a {
-        padding: 0;
-        font-size: .8rem;
-    }   
+  header,
+  header a {
+    padding: 0;
+    font-size: 0.6rem;
+    
+  }
 }

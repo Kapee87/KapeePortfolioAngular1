@@ -1,14 +1,14 @@
-div img {
+.home img {
     position: absolute;
     width: 100%;
     min-width: 700px;
-    height: 90vh;
+    
     min-height: 100%;
 }
 
 .down {
     position: absolute;
-    bottom: 2rem;
+    top: 7rem;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -28,18 +28,12 @@ div img {
 
 .down svg {
     color: #a1b5cb;
-    width: 4rem;
-    height: 1rem;
+    
+    height: 2rem;
 }
-.skillsApp{
-    margin-top: 100vh;
-    height: 100vh;
-    width: 100vw;
-    display:flex;
-    justify-content: center;
-
+.down svg:hover{
+    cursor: pointer;
 }
-
 .editBox{
     opacity: 0.2;
     color: aliceblue;
@@ -65,8 +59,3 @@ div img {
     }
 }
 
-@media screen and (max-width: 540px) {
-    div img {
-        left: -120px;
-    }
-}

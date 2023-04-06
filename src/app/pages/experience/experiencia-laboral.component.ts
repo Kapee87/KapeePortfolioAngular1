@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
 import { TokenServiceService } from 'src/app/service/token.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-experiencia-laboral',
@@ -40,5 +41,25 @@ export class ExperienciaLaboralComponent implements OnInit {
     this.service.delete(exp.idExp).subscribe((data) => {
       this.service.lista().subscribe((data) => (this.experiencia = data));
     });
+  }
+
+  @HostListener('window:wheel', ['$event'])
+  onScroll(event: any) {
+    if (
+      event.deltaY > 0 &&
+      window.innerHeight + window.scrollY >= document.body.offsetHeight - 1 &&
+      !this.varclass
+    ) {
+      Swal.fire({
+        title: '¿Ir a educación?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Ir!',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.router.navigateByUrl('/educacion');
+        }
+      });
+    }
   }
 }

@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 import { Persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/service/persona.service';
 import { TokenServiceService } from 'src/app/service/token.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-sobre-mi',
@@ -19,7 +21,8 @@ export class SobreMiComponent implements OnInit {
 
   constructor(
     public personaService: PersonaService,
-    private tokenService: TokenServiceService
+    private tokenService: TokenServiceService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -53,5 +56,24 @@ export class SobreMiComponent implements OnInit {
         console.log(data);
       });
     } catch (error) {}
+  }
+  @HostListener('window:wheel', ['$event'])
+  onScroll(event: any) {
+    if (
+      event.deltaY > 0 &&
+      window.innerHeight + window.scrollY >= document.body.offsetHeight &&
+      !this.varclass
+    ) {
+      Swal.fire({
+        title: '¿Ir a experiencia laboral?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Ir!',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.router.navigateByUrl('/experiencia-laboral');
+        }
+      });
+    }
   }
 }
