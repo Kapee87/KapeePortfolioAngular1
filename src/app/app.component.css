@@ -4,15 +4,22 @@
 font-family: 'Allison', cursive;
 font-family: 'Averia Sans Libre', cursive;
 font-family: 'Bad Script', cursive; */
-.gradient-custom video {
-  /* fallback for old browsers */
-  background: #20152c;
-  /* Chrome 10-25, Safari 5.1-6 */
+.gradient-custom {
+  /* background: #20152c; */
   background: -webkit-linear-gradient(
     to right,
-    rgb(19, 15, 23),
+    rgba(18, 14, 21, 0.982),
     rgb(66, 66, 67)
   );
+  background: linear-gradient(
+    to right,
+    rgba(18, 14, 21, 0.982),
+    rgb(66, 66, 67)
+  );
+  background: url("../assets/floor-899.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   /* background: linear-gradient(to right, rgb(94, 91, 99), rgb(0, 0, 0)); */
   position: fixed;
@@ -32,20 +39,13 @@ font-family: 'Bad Script', cursive; */
     rgb(19, 15, 23),
     rgb(66, 66, 67)
   );
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* background: linear-gradient(to right, rgb(94, 91, 99), rgb(0, 0, 0)); */
+
   position: fixed;
   width: 100vw;
   height: 100vh;
   z-index: -1;
 }
 
-body{
+body {
   overflow: hidden;
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(
-    to right,
-    rgb(19, 15, 23),
-    rgb(66, 66, 67)
-  );
 }
