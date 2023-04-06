@@ -42,4 +42,10 @@ font-family: 'Bad Script', cursive; */
 
 body{
   overflow: hidden;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgb(19, 15, 23),
+    rgb(66, 66, 67)
+  );
 }
