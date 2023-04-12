@@ -1,6 +1,8 @@
-<app-header></app-header>
-<div class="fixed gradient-custom pt-5">
-    <!-- <video src="https://firebasestorage.googleapis.com/v0/b/portfolio-ap-kapeeh.appspot.com/o/video%2Ffloor-899.mp4?alt=media&token=629ce518-15fa-451b-8a92-9f52cd201ca5" loop autoplay="true"></video> -->
-</div>
+<app-header *ngIf="!isHome || (isHomeStr.value === 'false') " ></app-header>
+<div class="fixed gradient-custom pt-5"></div>
 <router-outlet></router-outlet>
+<!-- <p class="superPit">acá el datin: {{ isHomeStr.value }}</p> -->
+<h5 class="timerShow" *ngIf="logged">
+  Tiempo de sesión restante: {{ remainingTime$ | async }}
+</h5>
 <app-footer></app-footer>

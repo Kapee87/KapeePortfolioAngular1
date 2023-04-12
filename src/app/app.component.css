@@ -16,7 +16,7 @@ font-family: 'Bad Script', cursive; */
     rgba(18, 14, 21, 0.982),
     rgb(66, 66, 67)
   );
-  background: url("../assets/floor-899.gif");
+  background: url("https://firebasestorage.googleapis.com/v0/b/portfolio-ap-kapeeh.appspot.com/o/imagen%2Ffondo%2Ffloor-899.gif?alt=media&token=1cc2dfe1-6b44-4cd3-aa8e-3925b1db6163");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -48,4 +48,18 @@ font-family: 'Bad Script', cursive; */
 
 body {
   overflow: hidden;
+}
+
+.timerShow{
+  position: fixed;
+  bottom: 2.05rem;
+  width: 100vw;
+  text-align: center;
+  background-color: rgba(95, 42, 165, 0.897);
+  color: rgba(23, 27, 31, 0.89);
+}
+.superPit{
+  z-index: 1000;
+  font-size: 5rem;
+  color: red;
 }

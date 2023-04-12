@@ -69,10 +69,11 @@ export class LoginComponent implements OnInit {
         this.token = data;
         // console.log(this.token.token);
         sessionStorage.setItem('token', this.token.token);
+        sessionStorage.setItem('sessionTime', '300');
         this.isVisible();
-        this.sessionService.SessionTimeOut();
         Swal.fire('Sesión iniciada', 'Bienvenid@', 'success');
-        this.router.navigateByUrl('/');
+        // this.router.navigateByUrl('/', { skipLocationChange: false });
+        location.replace('/')
       });
     } else {
       this.form.markAllAsTouched();
@@ -81,6 +82,7 @@ export class LoginComponent implements OnInit {
 
   onCloseSession() {
     sessionStorage.clear();
+    this.sessionService.sessionEnd();
     this.isVisible();
   }
   extendSession() {

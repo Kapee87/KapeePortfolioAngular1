@@ -81,6 +81,7 @@ export class NewExperienceComponent implements OnInit {
         if (this.editId === null) {
           this.expService.save(this.experiencia).subscribe((data) => {
             Swal.fire('Se registró una nueva experiencia laboral');
+            this.imgService.url = '';
             this.router.navigateByUrl('/experiencia-laboral');
           });
         } else {
@@ -88,6 +89,7 @@ export class NewExperienceComponent implements OnInit {
             .update(this.editId, this.experiencia)
             .subscribe((data) => {
               Swal.fire('Se actualizó la experiencia laboral');
+              this.imgService.url = '';
               this.router.navigateByUrl('/experiencia-laboral');
             });
         }

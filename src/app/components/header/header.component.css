@@ -5,13 +5,13 @@ header {
   padding: 0 2vw;
   box-shadow: 1px 1px 5px rgba(240, 248, 255, 0.358);
   background-color: #35393c;
-
   display: flex;
   align-items: baseline;
   justify-content: space-around;
   gap: 10vw;
   min-height: max-content;
   width: 100%;
+  transition: all 3s ease-in-out;
 }
 
 
@@ -30,6 +30,15 @@ header a {
 header a:hover {
   color: aliceblue;
   text-shadow: none;
+}
+
+.rollable{
+  position: fixed;
+top: -500px;
+left: 0;
+right: 0;
+z-index: 999; /* ajusta el valor de z-index para que el header esté por encima de otros elementos si es necesario */
+transition: all 3s ease-in-out; /* agrega una transición suave para el efecto de aparición/desaparición */
 }
 
 

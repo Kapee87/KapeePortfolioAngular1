@@ -1,14 +1,7 @@
-.home img {
-    position: absolute;
-    width: 100%;
-    min-width: 700px;
-    
-    min-height: 100%;
-}
 
 .down {
     position: absolute;
-    top: 7rem;
+    top: 19rem;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -22,12 +15,33 @@
     font-size: 3rem;
     animation: entrance 2s ease-in-out infinite alternate;
     transition: entrance 2s;
-    color: #a1b5cb;
+    color: #b1becb;
     text-shadow: black 5px 5px 5px;
+}
+.bannerImg{
+    width: 100vw;
+    z-index: 3;
+}
+.bannerImg::after{
+    position: absolute;
+    top: 2rem;
+    left: 45vw;
+    z-index: 100;
+    font-size: 3rem;
+}
+.bannerImg img:hover{
+    filter:brightness(.1);
+}
+.bannerImg:hover::after{
+    content: "Click para abrir barra de navegacion";
+    color: rgb(255, 255, 255);
+}
+.down p{
+    color: #8b96a1ce;
 }
 
 .down svg {
-    color: #a1b5cb;
+    color: #b9c7d5;
     
     height: 2rem;
 }
@@ -45,7 +59,9 @@
   .visible {
     display: grid;
   }
+  
 
+ 
 
 @keyframes entrance {
     0% {

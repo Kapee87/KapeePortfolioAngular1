@@ -71,9 +71,9 @@ export class EditaraboutComponent implements OnInit {
             telefono: '+54-9-02257-15-665721',
             correo: 'namontaner87@gmail.com',
             descripcion:
-              'Soy un hombre apasionado por muchas cosas, entre las que enumero la familia, las amistades, la música, la tecnología y la comida. Me gusta pensar que tengo facilidad para la creación. Con esta certeza, hice frente a varios desafíos de distintas índoles como mi propio taller de música, reformas de albañilería, electricidad y/o carpintería en mi hogar. Siempre dispuesto a aprender sobre lo que haga falta, y analizar desde la lógica el mejor abordaje para cada proyecto o trabajo a realizar. En un ambiente laboral puedo desempeñarme con muy buena autonomía, contribuyendo al equipo todo lo que pueda en pos de lograr los objetivos propuestos o requeridos. Prefiero las cosas claras, y es por eso que cuando no me siento apto para la tarea o de alguna forma mi juicio o desempeño pueden verse comprometidos de forma alguna, no tengo miedo de comunicarlo a quien corresponda, ya que confío en que las relaciones honestas son las que hacen a las bases de un equipo funcional. Me gusta asentarme y hallar mi lugar, en contra de la corriente popular actual de pasar de una empresa a otra, siempre y cuando existan las motivaciones suficientes para poder desarrollarme y sentirme cómodo en lo que hago.',
+              'Soy un hombre apasionado por muchas cosas, entre las que enumero la familia, las amistades, la música, la tecnología y la comida. Me gusta pensar que tengo facilidad para la creación. Con esta certeza, hice frente a varios desafíos de distintas índoles como mi propio taller de música en el cual pude producir un álbum y un ep independientes y de forma amateur; reformas y refacciones en mi hogar, y más... Siempre dispuesto a aprender sobre lo que haga falta, y analizar desde la lógica el mejor abordaje para cada proyecto o trabajo a realizar. En un ambiente laboral puedo desempeñarme con muy buena autonomía, contribuyendo al equipo todo lo que pueda en pos de lograr los objetivos propuestos o requeridos. Prefiero las cosas claras, y es por eso que cuando no me siento apto para la tarea o de alguna forma mi juicio o desempeño pueden verse comprometidos de forma alguna, no tengo miedo de comunicarlo a quien corresponda, ya que confío en que las relaciones honestas son las que hacen a las bases de un equipo funcional. Me gusta asentarme y hallar mi lugar, en contra de la corriente popular actual de pasar de una empresa a otra, siempre y cuando existan las motivaciones suficientes para poder desarrollarme y sentirme cómodo en lo que hago.',
             url_foto:
-              'https://firebasestorage.googleapis.com/v0/b/portfolio-ap-kapeeh.appspot.com/o/imagen%2Fperfil_1',
+              'https://firebasestorage.googleapis.com/v0/b/portfolio-ap-kapeeh.appspot.com/o/imagen%2Fabout%2FWhatsApp%20Image%202023-01-31%20at%2016.50.07.jpeg?alt=media&token=86d096a4-d023-4b5d-abc8-6dbb87637f2b',
           })
           .subscribe((data) => {
             console.log(data);
@@ -151,6 +151,7 @@ export class EditaraboutComponent implements OnInit {
                   'los datos fueron correctamente actualizados',
                   'success'
                 );
+                this.imgService.url = '';
                 this.router.navigateByUrl('/sobre-mi');
               }
             });

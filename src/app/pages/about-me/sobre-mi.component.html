@@ -2,7 +2,7 @@
 <app-spinner [ngClass]="{ hidden: !varclass, visible: varclass }" class="fondieu"></app-spinner>
 <div class="sobre-mi" [ngClass]="{ hidden: varclass, visible: !varclass }">
   <div class="img-container">
-    <img [src]=" persona.url_foto"
+    <img [src]="persona.url_foto || 'https://firebasestorage.googleapis.com/v0/b/portfolio-ap-kapeeh.appspot.com/o/imagen%2Fabout%2FWhatsApp%20Image%202023-01-31%20at%2016.50.07.jpeg?alt=media&token=86d096a4-d023-4b5d-abc8-6dbb87637f2b'"
       alt="Foto de usuario(si no se muestra, intente cargar una en la sección de edición)" />
   </div>
   <div class="titleContainer">
@@ -18,11 +18,21 @@
     <p class="templateText">Fecha de Nacimiento: <span>{{ persona.fecha_nac }}</span></p>
     <hr />
     <p class="templateText">
-      Correo electrónico: <a [href]="correoString">{{ persona.correo }} </a>
+      Correo electrónico: <a [href]="correoString">{{ persona.correo }} <img src="../../../assets/envelope-fill.svg" alt=""> </a>
     </p>
     <hr />
     <p class="templateText">
       teléfono: <a [href]="telefonoString">{{ persona.telefono }}</a>
     </p>
   </span>
+</div>
+<div class="roundContainer" [ngClass]="{ hidden: varclass, visible: !varclass }">
+  <a target="_blank" href="https://www.facebook.com/elkapiloco" class="navLinkCollapse"><img
+      src="../../../assets/facebook.png" id="facebook" /></a>
+  <a target="_blank" href="https://github.com/Kapee87" class="navLinkCollapse"><img
+      src="../../../assets/github.png" id="github" /></a>
+  <a target="_blank" href="https://www.instagram.com/montanernahuel/" class="navLinkCollapse"><img
+      src="../../../assets/instagram.png" id="instagram" /></a>
+  <a target="_blank" href="https://www.linkedin.com/in/nahuel-andrés-montaner/" class="navLinkCollapse"><img
+      src="../../../assets/linkedin.png" id="linkedin" /></a>
 </div>

@@ -81,6 +81,7 @@ export class NewEdcucationComponent implements OnInit {
         if (this.editId === null) {
           this.educationService.save(this.educacion).subscribe((data) => {
             Swal.fire('Se registró una nueva educación');
+            this.imgService.url = '';
             this.router.navigateByUrl('/educacion');
           });
         } else {
@@ -88,6 +89,7 @@ export class NewEdcucationComponent implements OnInit {
             .update(this.editId, this.educacion)
             .subscribe((data) => {
               Swal.fire('Se actualizó la educacion');
+              this.imgService.url = '';
               this.router.navigateByUrl('/educacion');
             });
         }

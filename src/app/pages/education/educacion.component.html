@@ -21,15 +21,18 @@
       [ngClass]="{ hidden: !userLogged, visible: userLogged }"
     ></app-edit-icon>
     <app-delete-icon
+    class="deleteIcon"
       (click)="handleDelete(edu)"
       [ngClass]="{ hidden: !userLogged, visible: userLogged }"
     ></app-delete-icon>
-    <div class="img-container-edu">
+    <div class="img-container-edu container-fluid">
       <img [src]="edu.img_edu" alt="Logo de Empresa" />
       <h2 id="nombre">{{ edu.institucionEdu }}</h2>
     </div>
     <div class="text-container">
-      <h6>Puesto: {{ edu.tituloEdu }}</h6>
+      <span>
+        <h6>Puesto: {{ edu.tituloEdu }}</h6>
+      </span>
       <span
         >fecha de inicio: {{ edu.fechaIniEdu }} - {{ edu.fechaFinEdu }}
       </span>

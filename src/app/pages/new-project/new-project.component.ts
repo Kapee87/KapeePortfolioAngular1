@@ -81,6 +81,7 @@ export class NewProjectComponent implements OnInit {
         if (this.editId === null) {
           this.proyectoService.save(this.proyectos).subscribe((data) => {
             Swal.fire('Se registró un nuevo proyecto');
+            this.imgService.url = '';
             this.router.navigateByUrl('/proyectos');
           });
         } else {
@@ -88,6 +89,7 @@ export class NewProjectComponent implements OnInit {
             .update(this.editId, this.proyectos)
             .subscribe((data) => {
               Swal.fire('Se actualizó el proyecto');
+              this.imgService.url = '';
               this.router.navigateByUrl('/proyectos');
             });
         }

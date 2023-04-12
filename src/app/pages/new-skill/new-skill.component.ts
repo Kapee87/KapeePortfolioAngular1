@@ -59,6 +59,7 @@ export class NewSkillComponent implements OnInit {
         if (this.editId === null) {
           this.skillService.save(this.skills).subscribe((data) => {
             Swal.fire('Se registró una nueva skills laboral');
+            this.imgService.url = '';
             this.router.navigateByUrl('/skills');
           });
         } else {
@@ -66,6 +67,7 @@ export class NewSkillComponent implements OnInit {
             .update(this.editId, this.skills)
             .subscribe((data) => {
               Swal.fire('Se actualizó la habilidad');
+              this.imgService.url = '';
               this.router.navigateByUrl('/skills');
             });
         }
