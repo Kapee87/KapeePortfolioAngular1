@@ -1,16 +1,17 @@
 
 .down {
-    position: absolute;
-    top: 19rem;
     width: 100vw;
+    
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    flex-wrap: wrap;
+    
 }
 
 .down h1 {
-    width: 100vw;
+    display: block;
     font-weight: 600;
     font-size: 3rem;
     animation: entrance 2s ease-in-out infinite alternate;

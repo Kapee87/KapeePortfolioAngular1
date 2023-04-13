@@ -63,3 +63,9 @@ body {
   font-size: 5rem;
   color: red;
 }
+
+@media screen and (max-width:375px) {
+  .timerShow{
+    bottom: 2.6rem;
+  }
+}

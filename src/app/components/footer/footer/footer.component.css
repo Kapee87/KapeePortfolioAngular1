@@ -14,7 +14,7 @@ footer{
     text-align: center;
     box-shadow: 1px -1px 5px rgba(240, 248, 255, 0.358);
 }
-@media screen and (max-width:375px) {
+@media screen and (max-width:374px) {
     .foot p{
         transform: scale(0.8);
         margin: 0;
